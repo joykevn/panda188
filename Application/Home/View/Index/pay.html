@@ -1,0 +1,284 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+    <title>保单查询</title>
+    <!--[if (gte IE 9)|!(IE)]><!-->
+    <script src="__ROOT__/Public/amaze/assets/js/jquery.min.js"></script>
+    <!--<![endif]-->
+    <!--[if lte IE 8 ]>
+    <script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+    <script src="__ROOT__/Public/amaze/assets/js/amazeui.ie8polyfill.min.js"></script>
+    <![endif]-->
+    <script src="__ROOT__/Public/amaze/assets/js/amazeui.min.js"></script>
+    <script src="__ROOT__/Public/joyshang/myjavascript/pay.js"></script>
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+    <link rel="icon" type="image/png" href="__ROOT__/Public/amaze/assets/i/favicon.png">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="__ROOT__/Public/amaze/assets/i/app-icon72x72@2x.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+    <link rel="apple-touch-icon-precomposed" href="__ROOT__/Public/amaze/assets/i/app-icon72x72@2x.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
+    <meta name="msapplication-TileColor" content="#0e90d2">
+
+    <link rel="stylesheet" href="__ROOT__/Public/amaze/assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="__ROOT__/Public/amaze/assets/css/app.css">
+    <link rel="stylesheet" href="__ROOT__/Public/joyshang/mycss/pay.css">
+</head>
+<body>
+<!--页头-->
+<header data-am-widget="header"
+        class="am-header am-header-default">
+    <div class="am-header-left am-header-nav">
+        <a href="http://sz88.applinzi.com/index.php/Home/Index/pay" class="">
+
+            <i class="am-header-icon am-icon-home"></i>
+        </a>
+    </div>
+
+    <h1 class="am-header-title">
+        <a href="#title-link" class="">
+            保单查询
+        </a>
+    </h1>
+
+    <div class="am-header-right am-header-nav">
+        <a href="#right-link" class="">
+
+            <i class="am-header-icon am-icon-bars"></i>
+        </a>
+    </div>
+</header>
+
+<div id="pay-shuruqu">
+<form class="am-form">
+    <fieldset>
+        <legend>保单缴费查询</legend>
+        <div class="am-form-group">
+            <label for="pay-input-chepaihao">请输入车牌号查询</label>
+            <!--车牌号输入框-->
+            <div class="am-g">
+                <div class="am-u-sm-3">
+                    <select id="pay-select-sheng">
+                        <option value="苏" selected>苏</option>
+                        <option value="皖">皖</option>
+                        <option value="浙">浙</option>
+                        <option value="京">京</option>
+                        <option value="沪">沪</option>
+                        <option value="津">津</option>
+                        <option value="甘">甘</option>
+                        <option value="粤">粤</option>
+                        <option value="桂">桂</option>
+                        <option value="贵">贵</option>
+                        <option value="琼">琼</option>
+                        <option value="冀">冀</option>
+                        <option value="豫">豫</option>
+                        <option value="黑">黑</option>
+                        <option value="鄂">鄂</option>
+                        <option value="湘">湘</option>
+                        <option value="吉">吉</option>
+                        <option value="闽">闽</option>
+                        <option value="赣">赣</option>
+                        <option value="辽">辽</option>
+                        <option value="蒙">蒙</option>
+                        <option value="宁">宁</option>
+                        <option value="青">青</option>
+                        <option value="鲁">鲁</option>
+                        <option value="晋">晋</option>
+                        <option value="陕">陕</option>
+                        <option value="川">川</option>
+                        <option value="藏">藏</option>
+                        <option value="新">新</option>
+                        <option value="云">云</option>
+                        <option value="渝">渝</option>
+                        <option value="港">港</option>
+                        <option value="澳">澳</option>
+                        <option value="台">台</option>
+                    </select>
+                </div>
+                <div class="am-u-sm-2">
+                    <select id="pay-select-qu">
+                        <option value="A" selected>A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="E">E</option>
+                        <option value="F">F</option>
+                        <option value="G">G</option>
+                        <option value="H">H</option>
+                        <option value="I">I</option>
+                        <option value="J">J</option>
+                        <option value="K">K</option>
+                        <option value="L">L</option>
+                        <option value="M">M</option>
+                        <option value="N">N</option>
+                        <option value="O">O</option>
+                        <option value="P">P</option>
+                        <option value="Q">Q</option>
+                        <option value="R">R</option>
+                        <option value="S">S</option>
+                        <option value="T">T</option>
+                        <option value="U">U</option>
+                        <option value="V">V</option>
+                        <option value="W">W</option>
+                        <option value="X">X</option>
+                        <option value="Y">Y</option>
+                        <option value="Z">Z</option>
+                    </select>
+                </div>
+                <div class="am-u-sm-7">
+                    <input type="text" class="" id="pay-input-chepaihao" placeholder="如：8ac88" onkeypress="this.value=this.value.toUpperCase();" onkeyup="this.value=this.value.toUpperCase();" required minlength="5" maxlength="5"/>
+                </div>
+            </div>
+        </div>
+        <div class="am-form-group">
+            <label for="pay-baodanhao4">请输入商业投保单号后4位</label>
+            <input type="text" id="pay-baodanhao4" placeholder="如：5678" class="am-form-field" minlength="4" maxlength="4" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)" onblur="this.v();"/>
+        </div>
+        <p align="center"><button type="button" class="am-btn am-btn-secondary" id="pay-btn-chaxun">查询</button></p>
+    </fieldset>
+</form>
+    <!--车牌号显示-->
+    <div id="pay-div-chepaihao">
+        <table id="pay-tab1" align="center">
+            <tr>
+                <td align="center" valign="middle" bgcolor="2222ff">
+                    <span id="pay-span1"></span><span id="pay-span2"></span><span id="pay-span3"></span>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+<div id="pay-zhanshiqu">
+    <h3 align="center">请核对信息</h3>
+    <table class="am-table am-table-bordered" id="pay-tab-baodanxinxi">
+        <thead>
+        <tr>
+            <th>投保人</th>
+            <th>被保人</th>
+            <th>保单类型</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <form action="" class="am-form">
+        <fieldset>
+            <!--<div class="am-form-group">-->
+                <!--<label for="pay-input-baodanhao">请输入保单号后4位</label>-->
+                <!--<input type="text" id="pay-input-baodanhao" placeholder="如：1234" class="am-form-field" minlength="4" maxlength="4" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)" onblur="this.v();" required/>-->
+            <!--</div>-->
+
+            <div class="am-form-group">
+                <h3>请选择人员</h3>
+                <label class="am-radio-inline">
+                    <input type="radio" name="radio10" value="投保人" data-am-ucheck> 投保人
+                </label>
+                <label class="am-radio-inline">
+                    <input type="radio" name="radio10" value="被保人" data-am-ucheck> 被保人
+                </label>
+            </div>
+
+            <div class="am-form-group">
+                <label for="pay-select-yinhang">选择银行</label>
+                <select id="pay-select-yinhang">
+                    <option value="中国工商银行">中国工商银行</option>
+                    <option value="中国农业银行">中国农业银行</option>
+                    <option value="中国银行">中国银行</option>
+                    <option value="中国建设银行">中国建设银行</option>
+                    <option value="中国光大银行">中国光大银行</option>
+                    <option value="中国民生银行">中国民生银行</option>
+                    <option value="交通银行">交通银行</option>
+                    <option value="浙商银行">浙商银行</option>
+                    <option value="邮政储蓄">邮政储蓄</option>
+                    <option value="国资其他银行">国资其他银行</option>
+                    <option value="外资银行">外资银行</option>
+                    <option value="其他">其他</option>
+                </select>
+                <span class="am-form-caret"></span>
+            </div>
+            <!--隐藏的其他银行名称-->
+            <div id="pay-otherbank">
+                <div class="am-form-group">
+                    <label for="pay-input-otherbank">请输入其他银行名称</label>
+                    <input type="text" id="pay-input-otherbank" placeholder="请输入其他银行名称" class="am-form-field" minlength="1" maxlength="15"/>
+                </div>
+            </div>
+
+            <div class="am-form-group">
+                <label for="pay-input-kahao">请输入银行卡号</label>
+                <input type="text" id="pay-input-kahao" placeholder="请输入正确银行卡号" class="am-form-field" minlength="8" maxlength="20" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)" onblur="this.v();" required/>
+            </div>
+            <div class="am-form-group">
+                <label for="pay-input-xiongmao">请输入配送员编码</label>
+                <input type="text" id="pay-input-xiongmao" placeholder="请输入配送员编码" class="am-form-field" minlength="1" maxlength="8" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)" onblur="this.v();" required/>
+            </div>
+
+            <p align="center">
+                <button type="button" class="am-btn am-btn-secondary" id="pay-btn-querentijiao">确认提交</button>
+            </p>
+        </fieldset>
+    </form>
+</div>
+
+<div id="guestinfo-jieshuqu">
+    <h1 align="center" id="pay-h2-jieshu"></h1>
+    <p align="center">
+        <button type="button" class="am-btn am-btn-secondary" id="pay-btn-fanhuishouye" onclick='window.open("http://sz88.applinzi.com/index.php/Home/Index/pay")' />返回首页</button>
+    </p>
+
+    <figure class="am-thumbnail">
+        <p class="am-text-secondary" align="center">请车主扫码核对信息</p>
+        <img align="center" width="40%" src="__ROOT__/Public/joyshang/img/kehuduan.png" alt=""/>
+    </figure>
+
+</div>
+
+<!--在这里编写你的代码-->
+<footer data-am-widget="footer"
+        class="am-footer am-footer-default"
+        data-am-footer="{  }">
+    <div class="am-footer-switch">
+    <span class="am-footer-ysp" data-rel="mobile"
+          data-am-modal="{target: '#am-switch-mode'}">
+          万物联云
+    </span>
+        <span class="am-footer-divider"> | </span>
+        <a id="godesktop" data-rel="desktop" class="am-footer-desktop" href="javascript:">
+            电脑版
+        </a>
+    </div>
+    <div class="am-footer-miscs ">
+
+        <p>由 <a href="http://sz88.applinzi.com/index.php/Home/Index/pay" title="诺亚方舟"
+                target="_blank" class="">万物联云</a>
+            提供技术支持</p>
+        <p>CopyRight©2014  WWLY Inc.</p>
+        <p>京ICP备13033178</p>
+    </div>
+</footer>
+
+</body>
+</html>

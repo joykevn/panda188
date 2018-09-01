@@ -1,0 +1,192 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+    <title>保单缴费金额查询</title>
+    <!--[if (gte IE 9)|!(IE)]><!-->
+    <script src="__ROOT__/Public/amaze/assets/js/jquery.min.js"></script>
+    <!--<![endif]-->
+    <!--[if lte IE 8 ]>
+    <script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+    <script src="__ROOT__/Public/amaze/assets/js/amazeui.ie8polyfill.min.js"></script>
+    <![endif]-->
+    <script src="__ROOT__/Public/amaze/assets/js/amazeui.min.js"></script>
+    <script src="__ROOT__/Public/joyshang/myjavascript/index.js"></script>
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+    <link rel="icon" type="image/png" href="__ROOT__/Public/amaze/assets/i/favicon.png">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="__ROOT__/Public/amaze/assets/i/app-icon72x72@2x.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+    <link rel="apple-touch-icon-precomposed" href="__ROOT__/Public/amaze/assets/i/app-icon72x72@2x.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
+    <meta name="msapplication-TileColor" content="#0e90d2">
+
+    <link rel="stylesheet" href="__ROOT__/Public/amaze/assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="__ROOT__/Public/amaze/assets/css/app.css">
+</head>
+<body>
+    <div id="baodanchaxun">
+        <div class="am-alert">
+            <h2 align="center">保单缴费金额查询</h2>
+        </div>
+        <p class="am-text-xl am-text-success am-text-center">请选择任意方式查询</p>
+        <form action="" class="am-form">
+        <div class="am-panel-group" id="accordion">
+            <div class="am-panel am-panel-default am-panel-secondary">
+                <div class="am-panel-hd">
+                    <h4 class="am-panel-title" data-am-collapse="{parent: '#accordion', target: '#do-not-say-1'}">
+                        按车牌号查询
+                    </h4>
+                </div>
+                <div id="do-not-say-1" class="am-panel-collapse am-collapse am-in">
+                    <div class="am-panel-bd">
+                        <!--<form action="" class="am-form">-->
+                            <fieldset class="am-margin-0 am-padding-0">
+                                <div class="am-form-group">
+                                    <!--<label for="doc-vld-chepaihao">车牌号：</label>-->
+                                    <div class="am-g">
+                                        <div class="am-u-sm-1"><b class="am-text-danger am-text-xl">苏</b></div>
+                                        <div class="am-u-sm-11">
+                                            <input type="text" id="doc-vld-chepaihao" minlength="5" placeholder="输入6位车牌号(不区分大小写)" class="am-form-field"/>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </fieldset>
+                        <!--</form>-->
+                    </div>
+                </div>
+            </div>
+            <div class="am-panel am-panel-secondary">
+                <div class="am-panel-hd">
+                    <h4 class="am-panel-title" data-am-collapse="{parent: '#accordion', target: '#do-not-say-2'}">
+                        按投保人姓名查询
+                    </h4>
+                </div>
+                <div id="do-not-say-2" class="am-panel-collapse am-collapse">
+                    <div class="am-panel-bd">
+                        <!--<form action="" class="am-form">-->
+                            <fieldset class="am-margin-0 am-padding-0">
+                                <div class="am-form-group">
+                                    <!--<label for="doc-vld-toubaoname">投保人姓名：</label>-->
+                                    <input type="text" id="doc-vld-toubaoname" minlength="2" placeholder="输入投保人姓名" class="am-form-field"/>
+                                </div>
+                            </fieldset>
+                        <!--</form>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+            <button type="button" class="am-btn am-btn-secondary am-btn-block am-round" id="button-chaxun">查询</button>
+        </form>
+    </div>
+    <!--查询信息显示-->
+    <div id="baodanxianshi">
+        <div class="am-alert">
+            <h2 align="center">保单缴费信息</h2>
+        </div>
+        <div class="am-g">
+            <div class="am-u-sm-5"><b class="am-text-lg am-text-success am-text-center">车牌号：</b></div>
+            <div class="am-u-sm-7">
+                <b class="am-text-lg am-text-warning am-text-center">苏</b>
+                <b class="am-text-lg am-text-warning am-text-center" id="p-chepaihao"></b>
+            </div>
+        </div>
+        <div class="am-g">
+            <div class="am-u-sm-5"><b class="am-text-lg am-text-success am-text-center">投保人：</b></div>
+            <div class="am-u-sm-7"><b class="am-text-lg am-text-warning am-text-center" id="p-toubaoren"></b></div>
+        </div>
+        <div class="am-g">
+            <div class="am-u-sm-5"><b class="am-text-lg am-text-success am-text-center">保费：</b></div>
+            <div class="am-u-sm-7">
+                <!--<b class="am-text-lg am-text-danger">￥ &nbsp;</b>-->
+                <b class="am-text-lg am-text-warning am-text-center" id="p-baofei"></b>
+                <b class="am-text-lg am-text-warning am-text-center">元</b>
+            </div>
+        </div><br>
+        <div class="am-panel am-panel-secondary">
+            <div class="am-panel-hd">保费缴纳金额填写</div>
+            <div class="am-panel-bd">
+                <form action="" class="am-form">
+                <fieldset>
+                    <div class="am-form-group">
+                        <div class="am-g">
+                            <div class="am-u-sm-5"><b class="am-text-lg am-text-success">保费金额：</b></div>
+                            <div class="am-u-sm-7">
+                                <input type="text" id="doc-vld-baofeijin" placeholder="输入保费金额" class="am-form-field" required/>
+                            </div>
+                        </div><br>
+                        <div class="am-text-center">
+                            <b class="am-text-danger">请核对金额后收取保费！</b>
+                        </div>
+
+
+
+                    </div>
+                    <!--<div class="am-alert-secondary">-->
+                        <!--<p align="center">如客户分多笔交易请填写以下备注，单笔完成请忽略</p>-->
+                    <!--</div>-->
+                    <!--<div class="am-g">-->
+                        <!--<div class="am-u-sm-5"><b class="am-text-default">金额一：</b></div>-->
+                        <!--<div class="am-u-sm-7">-->
+                            <!--<input type="text" id="input-jine1" placeholder="输入第一笔交易" class="am-form-field"/>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<br>-->
+                    <!--<div class="am-g">-->
+                        <!--<div class="am-u-sm-5"><b class="am-text-default">金额二：</b></div>-->
+                        <!--<div class="am-u-sm-7">-->
+                            <!--<input type="text" id="input-jine2" placeholder="输入第二笔交易" class="am-form-field"/>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<br>-->
+                    <!--<div class="am-g">-->
+                        <!--<div class="am-u-sm-5"><b class="am-text-default">金额三：</b></div>-->
+                        <!--<div class="am-u-sm-7">-->
+                            <!--<input type="text" id="input-jine3" placeholder="输入第三笔交易" class="am-form-field"/>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <div>
+                        <p class="am-text-xl am-text-success am-text-center" id="shoufeijine"></p>
+                        <p class="am-text-xl am-text-success am-text-center" id="shoufei"></p>
+                    </div>
+                    <p align="center">
+                        <button type="button" class="am-btn am-btn-secondary am-btn-center" id="button-jiaofei">完成缴费</button>
+                        <button type="button" class="am-btn am-btn-success am-btn-center" id="button-back">返回重填</button>
+                        <!--<button type="button" class="am-btn am-btn-secondary am-btn-block am-round" id="button-jiaofei">完成缴费</button>-->
+                    </p>
+                </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--测试ajax-->
+    <!--<input type="text" id="input-title" placeholder="title" class="am-form-field"/>-->
+    <!--<input type="text" id="input-message" placeholder="message" class="am-form-field"/>-->
+    <!--<div id="myDiv"><h2>通过 AJAX 改变文本</h2></div>-->
+
+    <!--<button id="testAjax" type="input">Ajax改变内容</button>-->
+<!--在这里编写你的代码-->
+
+
+</body>
+</html>

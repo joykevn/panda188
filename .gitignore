@@ -1,0 +1,21 @@
+﻿/.idea/
+/.idea/workspace.xml
+/.settings/
+/Public/.vs/
+/Application/Runtime/
+*.log
+*.project
+*.buildpath
+*.bak
+
+*/.settings/
+*/.DS_Store
+.DS_Store
+*/.idea/
+.idea/
+
+
+# Windows:
+Thumbs.db
+ehthumbs.db
+Desktop.ini

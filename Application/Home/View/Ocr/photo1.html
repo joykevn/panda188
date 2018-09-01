@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>XMLHttpRequest上传文件</title>
+    <script type="text/javascript">
+        var img_compass_url="{:U('Ocr/upload_file')}";
+    </script>
+</head>
+<body>
+<progress id="progressBar" value="0" max="100" style="width: 300px;"></progress>
+<span id="percentage"></span><span id="time"></span>
+<br /><br />
+<input type="file" id="file" name="myfile" accept="image/x-png, image/jpg, image/jpeg, image/gif"/>
+<input type="button" onclick="UploadFile()" value="上传" />
+<input type="button" onclick="cancleUploadFile()" value="取消" />
+<input type="button" onclick="oncli1()" value="测试" />
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="__ROOT__/Public/amaze/assets/js/jquery.min.js"></script>
+<!--<![endif]-->
+<!--[if lte IE 8 ]>
+<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="__ROOT__/Public/assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+<script src="__ROOT__/Public/amaze/assets/js/amazeui.min.js"></script>
+<script src="__ROOT__/Public/joyshang/myjavascript/photo1.js"></script>
+</body>
+</html>

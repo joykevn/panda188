@@ -1,0 +1,20 @@
+第一种：（三代核心）
+https://10.134.132.176:8888/casserver/login?service=http%3A%2F%2F10.134.132.176%3A80%2Fportal%2Findex.jsp
+VPN账号：zz0672，密码：26953505
+1241033446	 ZQ223344
+
+第二种：
+浏览器代理设置 218.28.178.254 22002
+https://219.150.160.182/cgi-bin/main.cgi
+zz0671  	72817725
+
+第三种：PICC电销系统
+浏览器代理设置 218.28.178.254 22002
+http://11.207.3.225/picctscenter/mainframe.htm
+41010761 ZQ112233
+
+
+
+asdasdasdf
+
+asdfasfasdf

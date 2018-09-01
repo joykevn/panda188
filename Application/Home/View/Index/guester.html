@@ -1,0 +1,131 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+    <title>客户信息</title>
+    <!--[if (gte IE 9)|!(IE)]><!-->
+    <script src="__ROOT__/Public/amaze/assets/js/jquery.min.js"></script>
+    <!--<![endif]-->
+    <!--[if lte IE 8 ]>
+    <script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+    <script src="__ROOT__/Public/amaze/assets/js/amazeui.ie8polyfill.min.js"></script>
+    <![endif]-->
+    <script src="__ROOT__/Public/amaze/assets/js/amazeui.min.js"></script>
+    <script src="__ROOT__/Public/joyshang/myjavascript/guester.js"></script>
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+    <link rel="icon" type="image/png" href="__ROOT__/Public/amaze/assets/i/favicon.png">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="__ROOT__/Public/amaze/assets/i/app-icon72x72@2x.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+    <link rel="apple-touch-icon-precomposed" href="__ROOT__/Public/amaze/assets/i/app-icon72x72@2x.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
+    <meta name="msapplication-TileColor" content="#0e90d2">
+
+    <link rel="stylesheet" href="__ROOT__/Public/amaze/assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="__ROOT__/Public/amaze/assets/css/app.css">
+</head>
+<body>
+<div class="am-alert">
+    <h2 align="center">客户信息查询</h2>
+</div>
+<div id="guester-shuruqu">
+<form class="am-form">
+    <fieldset>
+        <legend>查看投保信息</legend>
+        <div class="am-form-group">
+            <label for="doc-ipt-chepaihao">请输入车牌号查询</label>
+            <input type="text" class="" id="doc-ipt-chepaihao" placeholder="如：苏A88ac88">
+        </div>
+
+        <p align="center"><button type="button" class="am-btn am-btn-secondary" id="guester-btn-chaxun">查询</button></p>
+    </fieldset>
+</form>
+</div>
+<div id="guester-zhanshiqu">
+    <table class="am-table am-table-bordered">
+        <thead>
+        <tr>
+            <th>类别</th>
+            <th>保单信息</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="am-primary">
+            <td>客户角色</td>
+            <td>投保人</td>
+        </tr>
+        <tr class="am-warning">
+            <td>客户姓名</td>
+            <td>卢东东</td>
+        </tr>
+        <tr class="am-success">
+            <td>车牌号</td>
+            <td id="guester-lab-chepaihao2"></td>
+        </tr>
+        <tr class="am-warning">
+            <td>发动机号</td>
+            <td>HV2127456125485</td>
+        </tr>
+
+        <tr class="am-primary">
+            <td>身份证号</td>
+            <td>102157198808080002</td>
+        </tr>
+        <tr class="am-success">
+            <td>所在银行</td>
+            <td>中国工商银行</td>
+        </tr>
+        <tr class="am-warning">
+            <td>卡号</td>
+            <td>6669002599367898</td>
+        </tr>
+
+        <tr class="am-primary">
+            <td>标准保费</td>
+            <td>4469.8</td>
+        </tr>
+        <tr class="am-success">
+            <td>实际保费</td>
+            <td>2850</td>
+        </tr>
+        <tr class="am-warning">
+            <td>车船税</td>
+            <td>350</td>
+        </tr>
+
+        <tr class="am-primary">
+            <td>保单类别</td>
+            <td>商业险</td>
+        </tr>
+        </tbody>
+    </table>
+    <p align="center">
+        <button type="button" class="am-btn am-btn-secondary" id="guester-btn-queding">确定</button>
+        <!--<button type="button" class="am-btn am-btn-secondary" id="guester-btn-queding">确定</button>-->
+    </p>
+</div>
+
+<!--在这里编写你的代码-->
+
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+    <title>投保信息填报</title>
+    <!--[if (gte IE 9)|!(IE)]><!-->
+    <script src="__ROOT__/Public/amaze/assets/js/jquery.min.js"></script>
+    <!--<![endif]-->
+    <!--[if lte IE 8 ]>
+    <script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+    <script src="__ROOT__/Public/amaze/assets/js/amazeui.ie8polyfill.min.js"></script>
+    <![endif]-->
+    <script src="__ROOT__/Public/amaze/assets/js/amazeui.min.js"></script>
+    <script src="__ROOT__/Public/joyshang/myjavascript/index.js"></script>
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+    <link rel="icon" type="image/png" href="__ROOT__/Public/amaze/assets/i/favicon.png">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="__ROOT__/Public/amaze/assets/i/app-icon72x72@2x.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+    <link rel="apple-touch-icon-precomposed" href="__ROOT__/Public/amaze/assets/i/app-icon72x72@2x.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
+    <meta name="msapplication-TileColor" content="#0e90d2">
+
+    <link rel="stylesheet" href="__ROOT__/Public/amaze/assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="__ROOT__/Public/amaze/assets/css/app.css">
+</head>
+<body>
+<div class="am-alert">
+    <h2 align="center">客户信息填写</h2>
+</div>
+
+<form class="am-form">
+    <fieldset>
+        <legend>请选择用户角色</legend>
+        <div class="am-form-group">
+            <label class="am-radio-inline">
+                <input type="radio"  value="" name="docInlineRadio"> 投保人
+            </label>
+            <label class="am-radio-inline">
+                <input type="radio" name="docInlineRadio"> 被投保人
+            </label>
+        </div>
+
+
+        <div class="am-form-group">
+            <label for="doc-ipt-chepaihao">车牌号</label>
+            <input type="text" class="" id="doc-ipt-chepaihao" placeholder="如：苏A-88BL88">
+        </div>
+
+        <div class="am-form-group">
+            <label for="doc-ipt-fadongjihao">或发动机号</label>
+            <input type="text" class="" id="doc-ipt-fadongjihao" placeholder="请输入发动机号">
+        </div>
+
+        <div class="am-form-group">
+            <label for="doc-ipt-shefenzhenghao">身份证号</label>
+            <input type="text" class="" id="doc-ipt-shefenzhenghao" placeholder="身份证号后四位">
+        </div>
+
+        <div class="am-form-group">
+            <label for="doc-select-1">选择银行</label>
+            <select id="doc-select-1">
+                <option value="option1">中国工商银行</option>
+                <option value="option2">中国农业银行</option>
+                <option value="option3">中国银行</option>
+                <option value="option">中国建设银行</option>
+                <option value="option">中国光大银行</option>
+                <option value="option">中国民生银行</option>
+                <option value="option">交通银行</option>
+                <option value="option">浙商银行</option>
+                <option value="option">邮政储蓄</option>
+                <option value="option">国资其他银行</option>
+                <option value="option">外资银行</option>
+            </select>
+            <span class="am-form-caret"></span>
+        </div>
+
+        <div class="am-form-group">
+            <label for="doc-ipt-yinhangkahao">卡号</label>
+            <input type="text" class="" id="doc-ipt-yinhangkahao" placeholder="请输入银行卡号">
+        </div>
+
+
+        <div class="am-form-group">
+            <label for="doc-ta-1">备注信息</label>
+            <textarea class="" rows="3" id="doc-ta-1"></textarea>
+        </div>
+
+        <p align="center"><button type="submit" class="am-btn am-btn-default" id="btn_guester">提交</button></p>
+    </fieldset>
+</form>
+
+    
+<!--在这里编写你的代码-->
+
+
+</body>
+</html>

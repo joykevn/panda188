@@ -1,0 +1,252 @@
+.page-sign {
+/*	background: #5dd5c8 url('__ROOT__/Public/joyshang/img/newbg.png') center 450px no-repeat;*/
+	background: #5dd5c8 url(../../joyshang/img/newbg.png) center 450px no-repeat;
+}
+#wrap {
+	position: relative
+}
+.sign-wrap {
+	width: 410px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: 268px 0 0 -205px
+}
+.sign-form .row-select {
+    position: relative;
+    z-index: 1;
+}
+.ipt {
+    padding: 6px 12px 5px 7px;
+    min-height: 22px;
+    line-height: 22px;
+    border: 1px solid #e3e7ed;
+    font-size: 13px;
+    vertical-align: middle;
+    min-width: 300px;
+}
+.btn {
+    display: inline-block;
+    min-width: 112px;
+    box-sizing: content-box;
+    height: 36px;
+    line-height: 36px;
+    border: 1px #5dd5c8 solid;
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 1px;
+    background: #5dd5c8;
+    text-align: center;
+    cursor: pointer;
+}
+.sign-form {
+	width: 324px;
+	padding: 35px 43px 160px;
+	background: #fff;
+	border-radius: 8px;
+	box-shadow: 1px 2px 15px rgba(0, 0, 0, .3);
+	display: block;
+}
+.sign-scan {
+	position: relative
+}
+
+.sign-form .title {
+	font-weight: 400;
+	font-size: 26px;
+	line-height: 32px;
+	color: #5dd5c8;
+	position: relative;
+	text-align: center
+}
+
+.layui-tab-title li{
+	width: 40%;
+}
+.layui-tab-brief>.layui-tab-title .layui-this {
+    color: #009688;
+    font-size: 16px;
+}
+.layui-input-block {
+    /* margin-left: 110px; */
+    min-height: 36px;
+}
+
+.sign-form form {
+	/*padding-top: 22px*/
+}
+
+.sign-form .form-row {
+	margin-top: 26px
+}
+
+.sign-form .row-select {
+	position: relative;
+	z-index: 1
+}
+
+.sign-form .form-row em.error {
+	position: absolute;
+	display: block;
+	right: 0;
+	top: 9px;
+	font-style: normal;
+	color: #9fa3b0;
+	font-size: 12px;
+	padding-right: 15px
+}
+
+.sign-form .form-row .link-signin,
+.sign-form .form-row .link-sms {
+	text-align: right;
+	position: absolute;
+	right: 0;
+	cursor: pointer;
+	bottom: -28px
+}
+
+.sign-form .ipt,
+.sign-form .sel {
+	width: 286px;
+	min-width: 0;
+	padding: 9px 18px;
+	border-color: #e3e7ed;
+	vertical-align: middle
+}
+
+.sign-form .sel {
+	margin-right: 0;
+	width: 380px;
+	height: 42px
+}
+
+.row-code .cell-wrap,
+.sign-form .ipt-wrap {
+	position: relative;
+	display: block
+}
+
+.row-code .cell-wrap {
+	display: inline-block
+}
+
+.sign-form .dropdown-select {
+	position: absolute;
+	top: 1px;
+	left: 28px;
+	height: 40px;
+	z-index: 1;
+	background: 0 0
+}
+
+.sign-form .dropdown-select .text-select {
+	display: inline-block;
+	font-style: normal;
+	cursor: pointer;
+	width: 37px;
+	padding: 7px 25px 7px 0;
+	border: 0;
+	text-align: right
+}
+
+.sign-form .dropdown-select .icon-select-arrow {
+	right: 5px;
+	top: 12px
+}
+
+.sign-form .dropdown-menu {
+	z-index: 10;
+	left: 0
+}
+
+.sign-form .dropdown-menu ul {
+	width: 176px;
+	max-height: 292px
+}
+
+.sign-form .dropdown-menu .num {
+	float: right
+}
+
+
+.sign-form .ipt-number {
+	padding-left: 38px;
+	width: 246px
+}
+
+.sign-form .ipt-name {
+	padding-left: 38px;
+	width: 246px
+}
+.sign-form .ipt-pwd {
+	padding-left: 38px;
+	width: 246px
+}
+
+.sign-form .ipt-code {
+	padding-left: 38px;
+	width: 162px
+}
+
+
+
+.focus-wrap .ipt,
+.focus-wrap .sel,
+.sign-form .ipt:focus,
+.sign-form .sel:focus {
+	box-shadow: 1px 2px 3px #d7f4f1;
+	border-color: #59cac2
+}
+
+
+.sign-form .form-btn {
+	margin-top: 45px
+}
+
+.sign-form .form-btn .btn {
+	width: 100%;
+	font-size: 16px;
+	height: 42px;
+	line-height: 42px;
+	border: none;
+	cursor: pointer
+}
+
+.sign-form .form-btn .btn-disabled,
+.sign-form .form-btn .btn-scan {
+	background: #f2f5f9;
+	border-color: #f2f5f9;
+	color: #9fa3b0;
+	cursor: default
+}
+
+.sign-form .form-btn .btn-disabled {
+	cursor: default
+}
+
+.sign-form .form-btn .error-tip {
+	display: block;
+	visibility: hidden;
+	height: 26px;
+	margin-top: -37px;
+	color: #fc6c38;
+	padding-left: 20px;
+	background-position: 0 -1385px;
+	position: absolute;
+	top: 0
+}
+.sign-form .form-btn .error-tip .icon-waring {
+	margin-right: 5px
+}
+
+
+
+.sign-form button.count-down .num {
+	position: static;
+	color: #9fa3b0
+}
+.qrcode-box p {
+	padding: 39px 0 10px;;
+	text-align: center;
+	color: #9fa3af
+}

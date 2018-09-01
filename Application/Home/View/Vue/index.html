@@ -1,0 +1,48 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="__ROOT__/Public/vue/vue.js"></script>
+    <script>
+        Vue.component('todo-item',{
+            template:'<li>这是一个组件模板</li>'
+        });
+    </script>
+
+    <title>vue学习页面</title>
+</head>
+<body>
+<div id="app">
+    {{message}}
+</div>
+<div id="app-3">
+    <p v-if="seen">看一看</p>
+</div>
+<div id="app-4">
+    <ol>
+        <li v-for="todo in todoss">
+            {{todo.text}}
+        </li>
+    </ol>
+</div>
+<div id="app-5">
+    <p>{{message}}</p>
+    <button v-on:click="reverseMessage">逆转消息</button>
+</div>
+<div id="app-6">
+    <p>{{message}}</p>
+    <input v-model="message">
+</div>
+<ol>
+    <todo-item></todo-item>
+</ol>
+
+
+</body>
+<script type="text/javascript" src="__ROOT__/Public/joyshang/myjavascript/myvue.js"></script>
+</html>

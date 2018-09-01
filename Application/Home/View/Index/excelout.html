@@ -1,0 +1,117 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+    <title>Excel文件导出</title>
+    <!--[if (gte IE 9)|!(IE)]><!-->
+    <script src="__ROOT__/Public/amaze/assets/js/jquery.min.js"></script>
+    <!--<![endif]-->
+    <!--[if lte IE 8 ]>
+    <script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+    <script src="__ROOT__/Public/amaze/assets/js/amazeui.ie8polyfill.min.js"></script>
+    <![endif]-->
+    <script src="__ROOT__/Public/amaze/assets/js/amazeui.min.js"></script>
+    <script src="__ROOT__/Public/joyshang/myjavascript/excelOut.js"></script>
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+    <link rel="icon" type="image/png" href="__ROOT__/Public/amaze/assets/i/favicon.png">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="__ROOT__/Public/amaze/assets/i/app-icon72x72@2x.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+    <link rel="apple-touch-icon-precomposed" href="__ROOT__/Public/amaze/assets/i/app-icon72x72@2x.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
+    <meta name="msapplication-TileColor" content="#0e90d2">
+
+    <link rel="stylesheet" href="__ROOT__/Public/amaze/assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="__ROOT__/Public/amaze/assets/css/app.css">
+    <link rel="stylesheet" href="__ROOT__/Public/joyshang/mycss/pay.css">
+</head>
+<body>
+<!--页头-->
+<header data-am-widget="header"
+        class="am-header am-header-default">
+    <div class="am-header-left am-header-nav">
+        <a href="http://sz88.applinzi.com/index.php/Home/Index/pay" class="">
+
+            <i class="am-header-icon am-icon-home"></i>
+        </a>
+    </div>
+
+    <h1 class="am-header-title">
+        <a href="#title-link" class="">
+            Excel文件导出
+        </a>
+    </h1>
+
+    <div class="am-header-right am-header-nav">
+        <a href="#right-link" class="">
+
+            <i class="am-header-icon am-icon-bars"></i>
+        </a>
+    </div>
+</header>
+
+<div id="pay-shuruqu">
+<br><br>
+<p align="center">
+<a class="am-btn am-btn-warning" href="http://sz88.applinzi.com/index.php/Home/Index/returntbdh" target="_blank">发送给杨洋投保单号json</a>
+</p>
+<p align="center" class="am-text-danger">
+<a class="am-btn am-btn-warning" href="http://sz88.applinzi.com/index.php/Home/Index/getbaodanhao" target="_blank">匹配杨洋保单号数据</a>
+</p>
+<form action="{:U('Index/msgout')}" method="post" class="am-form"> 
+	<p align="center">          
+     	<button type="submit" class="am-btn am-btn-secondary" id="out">导出一致性EXCEL</button>
+    </p>
+</form>
+<form action="{:U('Index/msgoutno')}" method="post" class="am-form"> 
+	<p align="center">          
+     	<button type="submit" class="am-btn am-btn-warning" id="out">导出不一致性EXCEL</button>
+    </p>
+</form>
+</div>
+
+<!--在这里编写你的代码-->
+<footer data-am-widget="footer"
+        class="am-footer am-footer-default"
+        data-am-footer="{  }">
+    <div class="am-footer-switch">
+    <span class="am-footer-ysp" data-rel="mobile"
+          data-am-modal="{target: '#am-switch-mode'}">
+          万物联云
+    </span>
+        <span class="am-footer-divider"> | </span>
+        <a id="godesktop" data-rel="desktop" class="am-footer-desktop" href="javascript:">
+            电脑版
+        </a>
+    </div>
+    <div class="am-footer-miscs ">
+
+        <p>由 <a href="http://sz88.applinzi.com/index.php/Home/Index/pay" title="诺亚方舟"
+                target="_blank" class="">万物联云</a>
+            提供技术支持</p>
+        <p>CopyRight©2014  WWLY Inc.</p>
+        <p>京ICP备13033178</p>
+    </div>
+</footer>
+
+</body>
+</html>
