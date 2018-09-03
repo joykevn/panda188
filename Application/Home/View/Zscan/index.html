@@ -1,168 +1,174 @@
 <!DOCTYPE html>
 <!--郑州保单派送，通过扫码枪分配web页面-->
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>郑州人保订单派送分配</title>
-  <script src="__ROOT__/Public/amaze/assets/js/jquery.min.js"></script>
-  <link rel="stylesheet" href="__ROOT__/Public/layui/css/layui.css">
-  <link rel="stylesheet" href="__ROOT__/Public/joyshang/mycss/zscan_index.css">
-</head>
-<body class="layui-layout-body">
-<div class="layui-layout layui-layout-admin">
-  <div class="layui-header">
-    <div class="layui-logo">郑州人保订单派送分配</div>
-    <!-- 头部区域（可配合layui已有的水平导航） -->
-    <ul class="layui-nav layui-layout-left">
-      <li class="layui-nav-item"><a href="">派送机构</a></li>
-      <li class="layui-nav-item"><a href="">订单管理</a></li>
-      <li class="layui-nav-item">
-        <a href="javascript:;">其它系统</a>
-        <dl class="layui-nav-child">
-          <dd><a href="">三代核心</a></dd>
-          <dd><a href="">订单派送</a></dd>
-          <dd><a href="">电销管理</a></dd>
-        </dl>
-      </li>
-    </ul>
-    <ul class="layui-nav layui-layout-right">
-      <li class="layui-nav-item">
-        <a href="javascript:;">
-          <i class="layui-icon layui-icon-group" style="font-size: 16px; color: #2f89ff;"></i>
-          李四飞ffff
-        </a>
-        <dl class="layui-nav-child">
-          <dd><a href="">基本资料</a></dd>
-          <dd><a href="">安全设置</a></dd>
-        </dl>
-      </li>
-      <li class="layui-nav-item"><a href="/index.php/Home/Login/login_out">退出</a></li>
-    </ul>
-  </div>
-  
-  <div class="layui-side layui-bg-black">
-    <div class="layui-side-scroll">
-      <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
-      <ul class="layui-nav layui-nav-tree"  lay-filter="test">
-        <li class="layui-nav-item layui-nav-itemed">
-          <a class="" href="javascript:;">所有订单</a>
-          <dl class="layui-nav-child">
-            <dd><a href="javascript:load_home();">列表一</a></dd>
-            <dd><a href="javascript:;">列表二</a></dd>
-            <dd><a href="javascript:;">列表三</a></dd>
-            <dd><a href="javascript:;">超链接</a></dd>
-          </dl>
-        </li>
-        <li class="layui-nav-item">
-          <a href="javascript:;">派送订单</a>
-          <dl class="layui-nav-child">
-            <dd><a href="javascript:;">列表一</a></dd>
-            <dd><a href="javascript:;">列表二</a></dd>
-            <dd><a href="javascript:;">超链接</a></dd>
-          </dl>
-        </li>
-        <li class="layui-nav-item"><a href="javascript:;">派送状态</a></li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="layui-body">
-    <!-- 内容主体区域 -->
-    <!--<a class="layui-btn layui-btn-normal" href="http://www.layui.com/demo/nav.html" target="_blank">单独打开</a>-->
-    <button class="layui-btn" id="btn_test">派送员身份识别</button>
-    <div class="layui-tab layui-tab-card">
-      <ul class="layui-tab-title">
-        <li class="layui-this">订单分配</li>
-        <li>派送管理</li>
-        <li>状态查看</li>
-      </ul>
-      <div class="layui-tab-content">
-        <!--第一个选项卡-->
-        <div class="layui-tab-item layui-show">
-          <fieldset class="layui-elem-field layui-field-title">
-            <legend>总订单：105 —— 任务订单：46</legend>
-            <div class="layui-field-box">
-              <div class="layui-input-inline">
-                <input name="number" autocomplete="off" class="layui-input" type="text" id="number" >
-                <!--<a href="/panda188/index.php/Home/Index/index">简单数据表格</a>-->
-              </div>
-              <table class="layui-table" lay-size="sm">
-                <colgroup>
-                  <col width="60">
-                  <col width="150">
-                  <col width="200">
-                  <col>
-                </colgroup>
-                <thead>
-                <tr>
-                  <th>序号</th>
-                  <th>订单号</th>
-                  <th>收件人</th>
-                  <th>收件地址</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>
-                    <div class="layui-inline">
 
-                    </div>
-                  </td>
-                  <td>乔崇有</td>
-                  <td>河南省郑州市中牟县河南省中牟县姚家乡乔庄173号</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>41012218072853546016</td>
-                  <td>雷巧彦</td>
-                  <td>河南省郑州市中牟县河南省中牟县三官庙乡圪垱街村055号</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>41012518051651636298</td>
-                  <td>苗海</td>
-                  <td>河南省郑州市郑州市5.17送单 中州大道和贾路河交叉口路东走到头</td>
-                </tr>
-                </tbody>
-              </table>
-            </div>
-          </fieldset>
-          <form class="layui-form" action="">
-            <div class="layui-form-item">
-              <label class="layui-form-label">订单号：</label>
-              <div class="layui-input-block">
-                <input type="text" name="dingdanhao" required  lay-verify="required" placeholder="请输入订单号" autocomplete="off" class="layui-input">
-              </div>
-            </div>
-            <div class="layui-form-item">
-              <div class="layui-input-block">
-                <button class="layui-btn" lay-submit lay-filter="formDemo">提交</button>
-              </div>
-            </div>
-          </form>
-          <table id="table_ps" lay-filter="test"></table>
-        </div>
-        <!--第二个选项卡-->
-        <div class="layui-tab-item">
-          <iframe src="/panda188/index.php/Home/Index/index" frameborder="1" width="600" height="700"></iframe>
-        </div>
-        <!--第三个选项卡-->
-        <div class="layui-tab-item">
-          <table id="demo" lay-filter="test"></table>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="layui-footer">
-    <!-- 底部固定区域 -->
-    © wwly.com - 万物联云科技公司
-  </div>
-</div>
-<script src="__ROOT__/Public/layui/layui.js"></script>
-<script src="__ROOT__/Public/joyshang/myjavascript/zscan_index.js"></script>
-<script src="__ROOT__/Public/liujh/myjavascript/zScan.js"></script>
-</body>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>郑州人保订单派送分配</title>
+		<script src="__ROOT__/Public/amaze/assets/js/jquery.min.js"></script>
+		<link rel="stylesheet" href="__ROOT__/Public/layui/css/layui.css">
+		<link rel="stylesheet" href="__ROOT__/Public/joyshang/mycss/zscan_index.css">
+	</head>
+
+	<body class="layui-layout-body">
+		<div class="layui-layout layui-layout-admin">
+			<div class="layui-header">
+				<div class="layui-logo">郑州人保订单派送分配</div>
+				<!-- 头部区域（可配合layui已有的水平导航） -->
+				<ul class="layui-nav layui-layout-left">
+					<li class="layui-nav-item">
+						<a href="">派送机构</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="">订单管理</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">其它系统</a>
+						<dl class="layui-nav-child">
+							<dd>
+								<a href="">三代核心</a>
+							</dd>
+							<dd>
+								<a href="">订单派送</a>
+							</dd>
+							<dd>
+								<a href="">电销管理</a>
+							</dd>
+						</dl>
+					</li>
+				</ul>
+				<ul class="layui-nav layui-layout-right">
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<i class="layui-icon layui-icon-group" style="font-size: 16px; color: #2f89ff;"></i> 张三
+						</a>
+						<dl class="layui-nav-child">
+							<dd>
+								<a href="">基本资料</a>
+							</dd>
+							<dd>
+								<a href="">安全设置</a>
+							</dd>
+						</dl>
+					</li>
+					<li class="layui-nav-item">
+						<a href="/index.php/Home/Login/login_out">退出</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="layui-side layui-bg-black">
+				<div class="layui-side-scroll">
+					<!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+					<ul class="layui-nav layui-nav-tree" lay-filter="test">
+						<li class="layui-nav-item layui-nav-itemed">
+							<a class="" href="javascript:;">所有订单</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:load_home();">列表一</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">列表二</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">列表三</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">超链接</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;">派送订单</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;">列表一</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">列表二</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">超链接</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;">派送状态</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="layui-body">
+				<!-- 内容主体区域 -->
+
+				<!--<a class="layui-btn layui-btn-normal" href="http://www.layui.com/demo/nav.html" target="_blank">单独打开</a>-->
+
+				<button class="layui-btn" id="btn_test">派送员身份识别</button>
+
+				<div class="layui-tab layui-tab-card">
+					<ul class="layui-tab-title">
+						<li class="layui-this">订单分配</li>
+						<li>派送管理</li>
+						<li>状态查看</li>
+					</ul>
+					<div class="layui-tab-content">
+						<!--第一个选项卡-->
+						<div class="layui-tab-item layui-show">
+							<!--<fieldset class="layui-elem-field layui-field-title">-->
+
+							<form class="layui-form" action="">
+								<div class="layui-form-item">
+									<label class="layui-form-label">派送员编号</label>
+									<div class="layui-input-inline">
+										<input type="text" name="psy_name" required lay-verify="required" placeholder="请输入派送员编号" autocomplete="off" class="layui-input">
+									</div>
+									<div class="layui-input-inline">
+										<button class="layui-btn" lay-submit lay-filter="psy_formDemo">提交</button>
+									</div>
+									<label class="layui-form-label">订单号</label>
+									<div class="layui-input-inline">
+										<input id="dingdanhao1" type="text" name="dingdanhao" required lay-verify="required" placeholder="请输入订单号" autocomplete="off" class="layui-input">
+									</div>
+									<div class="layui-input-inline">
+										<button id="submmit" class="layui-btn" lay-submit lay-filter="formDemo">提交</button>
+									</div>
+								</div>								
+							</form>
+
+							<fieldset class="layui-elem-field layui-field-title" style="margin: 30px 0 30px;">
+								<legend>派送员派送进度</legend>
+
+							</fieldset>
+							<div class="layui-progress layui-progress-big" lay-showpercent="true">
+								<div class="layui-progress-bar" lay-percent="36 / 169"></div>
+							</div>
+							<!--</fieldset>-->
+							<table id="table_ps" lay-filter="test"></table>
+							
+						</div>
+						<!--第二个选项卡-->
+						<div class="layui-tab-item">
+							<iframe src="/panda188/index.php/Home/Index/index" frameborder="1" width="600" height="700"></iframe>
+						</div>
+						<!--第三个选项卡-->
+						<div class="layui-tab-item">
+							<table id="demo" lay-filter="test"></table>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="layui-footer">
+				<!-- 底部固定区域 -->
+				© wwly.com - 万物联云科技公司
+			</div>
+		</div>
+		<script src="__ROOT__/Public/layui/layui.js"></script>
+		<script src="__ROOT__/Public/joyshang/myjavascript/zscan_index.js"></script>
+
+	</body>
+
 </html>

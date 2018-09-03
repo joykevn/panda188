@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--郑州保单派送，派送员登录web页面-->
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>派送员登录</title>
+		<script src="__ROOT__/Public/amaze/assets/js/jquery.min.js"></script>
+		<link rel="stylesheet" href="__ROOT__/Public/layui/css/layui.css">
+
+		<link rel="stylesheet" href="__ROOT__/Public/liujh/mycss/login.css">
+	</head>
+
+	<body class="layui-layout-body page-sign">
+		<!--登录框-->
+		<div id="wrap">
+			<!--<div id="header"><h1 class="logo"><a href="" ka="header-home-logo" title=""><img src=""><span></span></a></h1></div>-->
+			<div class="sign-wrap">
+				<!--短信登录-->
+				<div class="sign-form sign-scan" style="display: block;">
+					<h3 class="title">派送员登录</h3>
+					<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+						<ul class="layui-tab-title">
+							<li class="layui-this" style="width: 40%;">扫码登录</li>
+							<li style="width: 40%;">账号登录</li>
+						</ul>
+						<div class="layui-tab-content" style="height: 100px;">
+							<!--派送员通过扫码枪登录-->
+							<div class="layui-tab-item layui-show">
+								<div class="qrcode-box">
+									<p><span>使用扫码枪扫码登录</span></p>
+									<div class="form-row row-select">
+										<span class="ipt-wrap">
+											<i class="icon-sign-phone"></i>
+											<input required type="tel" class="ipt ipt-number" placeholder="派送单号" name="psnumber">
+											
+										</span>
+									</div>
+									<div class="qrcode-tip" style="display: block;">
+										<div class="hover-range-left"></div>
+										<div class="hover-range-right"></div>
+									</div>
+									<div class="form-btn">
+										<button type="submit" class="btn">登录</button>
+									</div>
+								</div>
+							</div>
+							<!--派送员账号登录-->
+							<div class="layui-tab-item">
+								<form action=" " method="post">
+									<div class="form-row row-select">
+										<span class="ipt-wrap">
+											<i class="icon-sign-phone"></i>
+											<input type="text" lay-verify="required" class="ipt ipt-name" placeholder="派送员账号" name="psy_name">
+										</span>
+									</div>
+									<div class="form-row">
+										<span class="ipt-wrap">
+											<i class="icon-sign-sms"></i>
+											<input type="password" class="ipt ipt-pwd" ka="signup-sms" placeholder="输入密码" name="psy_pwd">									
+										</span>
+									</div>
+									<div class="form-btn">
+										<button type="submit" class="btn">登录</button>
+									</div>
+								</form>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<script src="__ROOT__/Public/layui/layui.js"></script>
+		<script src="__ROOT__/Public/joyshang/myjavascript/zscan_login_index.js"></script>
+		<script>
+			layui.use('element', function() {
+				var $ = layui.jquery,
+					//Tab的切换功能，切换事件监听等，需要依赖element模块
+					element = layui.element;
+			});
+		</script>
+		<script>
+			layui.use(['form', 'layedit', 'laydate','element'], function() {
+				var $ = layui.jqury,
+					form = layui.form,
+					layer = layui.layer,
+					layedit = layui.layedit,
+					element = layui.element;
+				 
+				 
+				 
+				
+				//自定义验证规则
+				form.verify({
+					psy_name: function(value) {
+						if(value.length < 5) {
+							return '标题至少得5个字符啊';
+						}
+					},
+					pass: [/(.+){6,12}$/, '密码必须6到12位'],
+					content: function(value) {
+						layedit.sync(editIndex);
+					}
+				});
+
+
+				//监听提交
+				form.on('submit(demo1)', function(data) {
+					layer.alert(JSON.stringify(data.field), {
+						title: '最终的提交信息'
+					})
+					return false;
+				});
+
+				
+
+			});
+		</script>
+	</body>
+
+</html>

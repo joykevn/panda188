@@ -13,7 +13,7 @@ layui.use(['jquery','element','table','laytpl','form'], function(){
     table.render({
        elem: '#demo'
         ,height: 615
-        ,url:'/index.php/Home/Zzps/printdd/'
+        ,url:'/panda188/index.php/Home/Zzps/printdd/'
         ,page:true
         ,even: true //开启隔行背景
         ,size: 'sm' //小尺寸的表格
@@ -42,7 +42,7 @@ layui.use(['jquery','element','table','laytpl','form'], function(){
                 table.render({
                     elem: '#table_ps'
                     ,height: 615
-                    ,url:'/index.php/Home/Zscan/rend_table_ps/'
+                    ,url:'rend_table_ps'
                     ,page:true
                     ,even: true //开启隔行背景
                     ,size: 'sm' //小尺寸的表格
