@@ -23,16 +23,7 @@ class ZscanController extends Controller {
 *************************************************************************** */
     //核对派送员编号，并根据派送员编号，查看今日该派送员订单情况。
     public function psy_check(){
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
     }
     
     
@@ -40,11 +31,16 @@ class ZscanController extends Controller {
     public function dd_check(){
         $m1  = M('zzps','tab_','DB_dlSAE');//基础数据库
         $m2  = M('zzps_status','tab_','DB_dlSAE');//派送状态库
+        $m3  = M('users','tab_','DB_dlSAE');//派送员人名
         //$m1  = M('zzps','tab_','DB_LOCALHOST');
         //$m2  = M('zzps_status','tab_','DB_LOCALHOST');//派送状态库
         $data=$m1->where("dingdanhao='%s'",$_POST['dingdanhao'])->field('dingdanhao,chepaihao,shoujianren,sddizhi')->select();
-        if(sizeof($data)){//有此订单
-           
+        $psy_info=$m3->where("usercode='%s'",$_POST['psy_code'])->field('username,usercode')->select();
+        if(sizeof($psy_info)){//派送员编码输入正确
+            
+        }
+        
+        if(sizeof($data)){//有此订单          
             $tem_data['dingdanhao']=$data[0]['dingdanhao'];
             $tem_data['chepaihao']=$data[0]['chepaihao'];
             $tem_data['shoujianren']=$data[0]['shoujianren'];
