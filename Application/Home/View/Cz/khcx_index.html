@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--郑州保单派送，客户移动端查询页面-->
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>客户查询</title>
+		<script src="__ROOT__/Public/amaze/assets/js/jquery.min.js"></script>
+		<link rel="stylesheet" href="__ROOT__/Public/layui/css/layui.css">
+		<link rel="stylesheet" href="__ROOT__/Public/liujh/mycss/khcx_index.css">
+	</head>
+
+	<body class="layui-layout-body page-sign">
+		<!--登录框-->
+		<div id="wrap">
+			<div class="sign-wrap">
+				<div class="sign-form sign-scan" style="display: block;">
+					<h3 class="title">客户查询</h3>
+					<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+						<div class="layui-tab-content" style="height: 100px;">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+							<form action=" " method="post">
+								<div class="form-row row-select">
+									<span class="ipt-wrap">
+										<i class="icon-sign-phone"></i>
+										<input type="text" lay-verify="required" class="ipt ipt-name" placeholder="派送员账号" name="psy_name">
+									</span>
+								</div>
+								<div class="form-row">
+									<span class="ipt-wrap">
+										<i class="icon-sign-sms"></i>
+										<input type="password" class="ipt ipt-pwd" ka="signup-sms" placeholder="输入密码" name="psy_pwd">									
+									</span>
+								</div>
+								<div class="form-btn">
+									<button type="submit" class="btn">登录</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="__ROOT__/Public/layui/layui.js"></script>
+		<script src="__ROOT__/Public/joyshang/myjavascript/zscan_login_index.js"></script>
+	</body>
+
+</html>
