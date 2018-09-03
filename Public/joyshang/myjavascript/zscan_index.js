@@ -27,16 +27,30 @@ layui.use(['jquery','element','table','laytpl','form'], function(){
 
 
     //监听POST提交
-    form.on('submit(formDemo)', function(data1){
+    form.on('submit(btn_dingdanhao)', function(up_data){
         //alert($("#dingdanhao").name);
         //layer.msg($("#dingdanhao1").value);
 
         $.ajax({
             type: 'POST',
             url: "dd_check",
-            data: data1.field,
+            data: up_data.field,
             dataType: 'json',
-            success: function (data) {
+            success: function (get_data) {
+                console.log(get_data);
+                //return false;
+                if(get_data=="psy_code_less")//无此派送员编码
+                {
+                    layer.msg(JSON.stringify('请输入正确的派送员编码!'));
+                    //console.log('sucdeee');
+                    return false;
+                }
+                if(get_data=="dingdan_less")//无此订单号
+                {
+                    layer.msg(JSON.stringify('请核实订单编号是否正确！'));
+                    //console.log('sucdeee');
+                    return false;
+                }
                 //layer.msg(JSON.stringify(data[0].chepaihao));
                 //$("#dingdanhao").value="";
                 table.render({
