@@ -37,6 +37,28 @@ class ZscanController extends Controller {
         $data=$m1->where("dingdanhao='%s'",$_POST['dingdanhao'])->field('dingdanhao,chepaihao,shoujianren,sddizhi')->select();
         $psy_info=$m3->where("usercode='%s'",$_POST['psy_code'])->field('username,usercode')->select();
         if(sizeof($psy_info)){//派送员编码输入正确
+<<<<<<< HEAD
+=======
+            
+        }
+        
+        if(sizeof($data)){//有此订单          
+            $tem_data['dingdanhao']=$data[0]['dingdanhao'];
+            $tem_data['chepaihao']=$data[0]['chepaihao'];
+            $tem_data['shoujianren']=$data[0]['shoujianren'];
+            $tem_data['sddizhi']=$data[0]['sddizhi'];
+            $tem_data['paisongyuan']="张三";
+            $tem_data['paisongtime']= date('Y-m-d H:i:s',time());
+            $tem_data['paisongstatus']="已分配，待派送";                     
+       
+            $result=$m2->add($tem_data);
+            //异常处置待定
+            if($result){
+                //$this->ajaxReturn($result,'JSON');
+            }else{
+                //$this->ajaxReturn(0,'JSON');
+            }
+>>>>>>> 31174abb82d06eec34e93cfc749e3c993f6af8d3
             
             if(sizeof($data)){//有此订单
                 $tem_data['dingdanhao']=$data[0]['dingdanhao'];
