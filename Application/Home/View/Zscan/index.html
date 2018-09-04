@@ -110,6 +110,7 @@
 				<div class="layui-tab layui-tab-card">
 					<ul class="layui-tab-title">
 						<li class="layui-this">订单分配</li>
+						<li>订单查询</li>
 						<li>派送管理</li>
 						<li>状态查看</li>
 					</ul>
@@ -117,13 +118,12 @@
 						<!--第一个选项卡-->
 						<div class="layui-tab-item layui-show">
 							<!--<fieldset class="layui-elem-field layui-field-title">-->
-
 							<form class="layui-form" action="">
 								<div class="layui-form-item">
 									<label class="layui-form-label">派送员编号</label>
 									<div class="layui-input-inline">
 										<input type="text" name="psy_code" required lay-verify="required" placeholder="请输入派送员编号" autocomplete="off" class="layui-input">
-									</div>
+									</div>							
 									<div class="layui-input-inline">
 										<button class="layui-btn" lay-submit lay-filter="psy_formDemo">提交</button>
 									</div>
@@ -134,7 +134,8 @@
 									<div class="layui-input-inline">
 										<button id="submmit" class="layui-btn" lay-submit lay-filter="btn_dingdanhao">提交</button>
 									</div>
-								</div>								
+								</div>
+
 							</form>
 
 							<fieldset class="layui-elem-field layui-field-title" style="margin: 30px 0 30px;">
@@ -146,13 +147,45 @@
 							</div>
 							<!--</fieldset>-->
 							<table id="table_ps" lay-filter="test"></table>
-							
+
 						</div>
 						<!--第二个选项卡-->
 						<div class="layui-tab-item">
-							<iframe src="/panda188/index.php/Home/Index/index" frameborder="1" width="600" height="700"></iframe>
+							<!--<fieldset class="layui-elem-field layui-field-title">-->
+							<form class="layui-form" action="">
+								<div class="layui-form-item">
+									<label class="layui-form-label">派送员编号</label>
+									<div class="layui-input-inline">
+										<input type="text" name="psy_code" required lay-verify="required" placeholder="请输入派送员编号" autocomplete="off" class="layui-input"  onkeyup="this.value=this.value.replace(/[^0-9-]+/,'');">
+									</div>
+
+									<label class="layui-form-label">查询日期</label>
+									<div class="layui-input-inline">
+										<input type="text" name="date" id="date" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+									</div>
+
+									<div class="layui-input-inline">
+										<button class="layui-btn" lay-submit lay-filter="btn_inquire">提交</button>
+									</div>
+								</div>
+							</form>
+
+							<fieldset class="layui-elem-field layui-field-title" style="margin: 30px 0 30px;">
+								<legend>派送员派送进度</legend>
+
+							</fieldset>
+							<div class="layui-progress layui-progress-big" lay-showpercent="true">
+								<div class="layui-progress-bar" lay-percent="36 / 169"></div>
+							</div>
+							<!--</fieldset>-->
+							<table id="table_ps" lay-filter="test"></table>
+
 						</div>
 						<!--第三个选项卡-->
+						<div class="layui-tab-item">
+							<iframe src="/panda188/index.php/Home/Index/index" frameborder="1" width="600" height="700"></iframe>
+						</div>
+						<!--第四个选项卡-->
 						<div class="layui-tab-item">
 							<table id="demo" lay-filter="test"></table>
 						</div>
