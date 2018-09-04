@@ -74,8 +74,7 @@ class ZscanController extends Controller {
         //$m2  = M('zzps_status','tab_','DB_LOCALHOST');//派送状态库
         $data=$m2->field()->select();
         if(sizeof($data)){//该单已扫描，待派送          
-            
-            
+ 
             $dbArr['code']=0;
             $dbArr['msg']="";
             $dbArr['count']=sizeof($data);
