@@ -92,7 +92,7 @@ layui.use(['jquery','element','table','laytpl','form','laydate'], function(){
 
 
     //监听POST提交-查询订单
-    form.on('submit(btn_inquire)', function(up_data){
+    form.on('submit(btn_inqui re)', function(up_data){
     	
         $.ajax({
             type: 'POST',
@@ -101,7 +101,7 @@ layui.use(['jquery','element','table','laytpl','form','laydate'], function(){
             dataType: 'json',
             success: function (get_data) {
                 console.log(get_data);
-                //return false;
+                return false;
                 table.render({
                     elem: '#table_ps'
                     ,height: 615

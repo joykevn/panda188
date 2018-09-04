@@ -72,7 +72,9 @@ class ZscanController extends Controller {
         $m2  = M('zzps_status','tab_','DB_dlSAE');//派送状态库
         //$m1  = M('zzps','tab_','DB_LOCALHOST');
         //$m2  = M('zzps_status','tab_','DB_LOCALHOST');//派送状态库
-        $data=$m2->field()->select();
+        $timestart= strftime("%Y-%m-%d 00:00:00");
+        $timeend= strftime("%Y-%m-%d 23:59:59");
+        $data=$m2->where("paisongtime >='$timestart' and paisongtime <='$timeend' ")->field()->select();
         if(sizeof($data)){//该单已扫描，待派送          
  
             $dbArr['code']=0;
