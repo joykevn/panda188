@@ -25,7 +25,7 @@ layui.use(['jquery','element','table','laytpl','form','laydate'], function(){
     table.render({
        elem: '#demo'
         ,height: 615
-        ,url:'/panda188/index.php/Home/Zzps/printdd/'
+        ,url:'printdd'
         ,page:true
         ,even: true //开启隔行背景
         ,size: 'sm' //小尺寸的表格
