@@ -9,7 +9,6 @@ layui.use(['jquery','element','table','laytpl','form','laydate'], function(){
         ,form=layui.form
         ,laydate = layui.laydate
         ,$=layui.$;
-
 	  //日期
 	  laydate.render({
 	    elem: '#date'
@@ -18,9 +17,9 @@ layui.use(['jquery','element','table','laytpl','form','laydate'], function(){
 	    elem: '#date1'
 	  });
 	  
+	  
 	  var now = new Date(); 
     date.value=new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getDate(); 
-	  
     //表格实例
     table.render({
        elem: '#demo'
@@ -42,7 +41,7 @@ layui.use(['jquery','element','table','laytpl','form','laydate'], function(){
     form.on('submit(btn_dingdanhao)', function(up_data){
         //alert($("#dingdanhao").name);
         //layer.msg($("#dingdanhao1").value);
-				$
+				
         $.ajax({
             type: 'POST',
             url: "dd_check",
@@ -50,6 +49,7 @@ layui.use(['jquery','element','table','laytpl','form','laydate'], function(){
             dataType: 'json',
             success: function (get_data) {
                 console.log(get_data);
+                
                 //return false;
                 if(get_data=="psy_code_less")//无此派送员编码
                 {
@@ -69,7 +69,7 @@ layui.use(['jquery','element','table','laytpl','form','laydate'], function(){
                     //console.log('sucdeee');
                     return false;
                 }
-                //$("table").first("tr").backgroundColor("#5FB878");
+                
                 //layer.msg(JSON.stringify(data[0].chepaihao));
                 //$("#dingdanhao").value="";
                 table.render({
@@ -87,22 +87,25 @@ layui.use(['jquery','element','table','laytpl','form','laydate'], function(){
                         none: '当前暂无扫描数据' //默认：无数据。注：该属性为 layui 2.2.5 开始新增
                       }
                     ,cols:[[
-                        {field:'id',title:'ID',width:50,sort:true}
-                        ,{field:'dingdanhao',title:'订单号',width:180}
-                        ,{field:'chepaihao',title:'车牌号',width:80}
-                        ,{field:'shoujianren',title:'收件人',width:80}
-                        ,{field:'sddizhi',title:'地址',width:220}
-                        ,{field:'psyname',title:'派送员',width:80}
-                        ,{field:'paisongtime',title:'扫描时间',width:150}
-                        ,{field:'paisongstatus',title:'派送状态',width:120}
+                        {field:'id',title:'ID',width:70,sort:true,align:'center'}
+                        ,{field:'dingdanhao',title:'订单号',width:200,align:'center'}
+                        ,{field:'chepaihao',title:'车牌号',width:100,align:'center'}
+                        ,{field:'shoujianren',title:'收件人',width:100,align:'center'}
+                        ,{field:'sddizhi',title:'地址',width:550,align:'left'}
+                        ,{field:'psyname',title:'派送员',width:100,align:'center'}
+                        ,{field:'paisongtime',title:'扫描时间',width:150,align:'center'}
+                        ,{field:'paisongstatus',title:'派送状态',width:120,align:'center'}
                     ]]
-                });
+                }); 
+                
+                var psyCode = $("#psy_code").val();
+								$(".ps_name").text(psyCode);
             }
         });
         return false;
     });
 
-
+		
 
     //监听POST提交-查询订单
     form.on('submit(btn_inquire)', function(up_data){
@@ -121,14 +124,14 @@ layui.use(['jquery','element','table','laytpl','form','laydate'], function(){
                 none: '当前暂无扫描数据' //默认：无数据。注：该属性为 layui 2.2.5 开始新增
               }
             ,cols:[[
-                {field:'id',title:'ID',width:50,sort:true}
-                ,{field:'dingdanhao',title:'订单号',width:180}
-                ,{field:'chepaihao',title:'车牌号',width:80}
-                ,{field:'shoujianren',title:'收件人',width:80}
-                ,{field:'sddizhi',title:'地址',width:220}
-                ,{field:'psyname',title:'派送员',width:80}
-                ,{field:'paisongtime',title:'扫描时间',width:150}
-                ,{field:'paisongstatus',title:'派送状态',width:120}
+                {field:'id',title:'ID',width:70,sort:true,align:'center'}
+                ,{field:'dingdanhao',title:'订单号',width:200,align:'center'}
+                ,{field:'chepaihao',title:'车牌号',width:100,align:'center'}
+                ,{field:'shoujianren',title:'收件人',width:100,align:'center'}
+                ,{field:'sddizhi',title:'地址',width:550,align:'left'}
+                ,{field:'psyname',title:'派送员',width:100,align:'center'}
+                ,{field:'paisongtime',title:'扫描时间',width:150,align:'center'}
+                ,{field:'paisongstatus',title:'派送状态',width:120,align:'center'}
             ]]
         });
         return false;
@@ -142,6 +145,7 @@ layui.use(['jquery','element','table','laytpl','form','laydate'], function(){
         layer.msg('[ID: '+ data.id +'] ' + field + ' 字段更改为：'+ value);
     });
 });
+
 
 //测试订单POST指令
 $(function () {
