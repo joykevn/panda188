@@ -63,6 +63,7 @@ layui.use(['jquery','element','table','laytpl','form','laydate'], function(){
                     //console.log('sucdeee');
                     return false;
                 }
+                //$("table").first("tr").backgroundColor("#5FB878");
                 //layer.msg(JSON.stringify(data[0].chepaihao));
                 //$("#dingdanhao").value="";
                 table.render({
@@ -156,7 +157,6 @@ $(function () {
                 //     layer.close(index);
                 //     layer.msg('演示完毕！您的口令：'+ pass +'<br>您最后写下了：'+text);
                 // });
-
             });
         });
     });
