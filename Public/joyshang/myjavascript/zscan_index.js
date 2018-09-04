@@ -63,27 +63,36 @@ layui.use(['jquery','element','table','laytpl','form','laydate'], function(){
                     //console.log('sucdeee');
                     return false;
                 }
+                if(get_data=="dingdan_chongfu")//订单号重复
+                {
+                    layer.msg(JSON.stringify('该订单已经扫描过！'));
+                    //console.log('sucdeee');
+                    return false;
+                }
                 //$("table").first("tr").backgroundColor("#5FB878");
                 //layer.msg(JSON.stringify(data[0].chepaihao));
                 //$("#dingdanhao").value="";
                 table.render({
                     elem: '#table_ps'
                     ,height: 615
-                    ,url:'rend_table_ps'
-                    ,page:true
+                    ,url:'rend_table_ps'+'?psycode='+up_data.field.psy_code
+                    ,page:false
                     ,even: true //开启隔行背景
                     ,size: 'sm' //小尺寸的表格
                     ,initSort: {
                         field: 'id' //排序字段，对应 cols 设定的各字段名
                         ,type: 'desc' //排序方式  asc: 升序、desc: 降序、null: 默认排序
                     }
+                    ,text: {
+                        none: '当前暂无扫描数据' //默认：无数据。注：该属性为 layui 2.2.5 开始新增
+                      }
                     ,cols:[[
                         {field:'id',title:'ID',width:50,sort:true}
                         ,{field:'dingdanhao',title:'订单号',width:180}
                         ,{field:'chepaihao',title:'车牌号',width:80}
                         ,{field:'shoujianren',title:'收件人',width:80}
                         ,{field:'sddizhi',title:'地址',width:220}
-                        ,{field:'paisongyuan',title:'派送员',width:80}
+                        ,{field:'psyname',title:'派送员',width:80}
                         ,{field:'paisongtime',title:'扫描时间',width:150}
                         ,{field:'paisongstatus',title:'派送状态',width:120}
                     ]]
