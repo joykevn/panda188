@@ -68,15 +68,19 @@ class ZscanController extends Controller {
     }
     //读取派送状态表tab_zzpsstatus，渲染派送表格
     public function rend_table_ps(){
-        $m1  = M('zzps','tab_','DB_dlSAE');//基础数据库
+        //$m1  = M('zzps','tab_','DB_dlSAE');//基础数据库
         $m2  = M('zzps_status','tab_','DB_dlSAE');//派送状态库
+        $m3  = M('users','tab_','DB_dlSAE');//派送员人名
         //$m1  = M('zzps','tab_','DB_LOCALHOST');
         //$m2  = M('zzps_status','tab_','DB_LOCALHOST');//派送状态库
         $timestart= strftime("%Y-%m-%d 00:00:00");
         $timeend= strftime("%Y-%m-%d 23:59:59");
         $data=$m2->where("paisongtime >='$timestart' and paisongtime <='$timeend' ")->field()->select();
+        //var_dump($data);die();
         if(sizeof($data)){//该单已扫描，待派送          
- 
+            foreach($data as $key=>$value){//改变下标参数
+                $data[$key]['id']=$key+1;
+            }
             $dbArr['code']=0;
             $dbArr['msg']="";
             $dbArr['count']=sizeof($data);

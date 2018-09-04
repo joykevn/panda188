@@ -103,7 +103,7 @@ layui.use(['jquery','element','table','laytpl','form','laydate'], function(){
             dataType: 'json',
             success: function (get_data) {
                 console.log(get_data);
-                return false;
+                //return false;
                 table.render({
                     elem: '#table_ps'
                     ,height: 615
