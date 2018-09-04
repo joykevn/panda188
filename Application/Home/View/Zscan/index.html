@@ -41,7 +41,8 @@
 				<ul class="layui-nav layui-layout-right">
 					<li class="layui-nav-item">
 						<a href="javascript:;">
-							<i class="layui-icon layui-icon-group" style="font-size: 16px; color: #2f89ff;"></i> 张三
+							<i class="layui-icon layui-icon-group" style="font-size: 16px; color: #2f89ff;"></i>
+							<span class="ps_name"></span>
 						</a>
 						<dl class="layui-nav-child">
 							<dd>
@@ -55,7 +56,7 @@
 					<li class="layui-nav-item">
 						<a href="/index.php/Home/Login/login_out">退出</a>
 					</li>
-				</ul>
+				</ul>    
 			</div>
 
 			<div class="layui-side layui-bg-black">
@@ -63,7 +64,7 @@
 					<!-- 左侧导航区域（可配合layui已有的垂直导航） -->
 					<ul class="layui-nav layui-nav-tree" lay-filter="test">
 						<li class="layui-nav-item layui-nav-itemed">
-							<a class="" href="javascript:;">所有订单</a>
+							<a class="" href="javascript:;">所有订单</a>l
 							<dl class="layui-nav-child">
 								<dd>
 									<a href="javascript:load_home();">列表一</a>
@@ -111,8 +112,9 @@
 					<ul class="layui-tab-title">
 						<li class="layui-this">订单分配</li>
 						<li>订单查询</li>
-						<li>派送管理</li>
+						<!--<li>派送管理</li>-->
 						<li>状态查看</li>
+						
 					</ul>
 					<div class="layui-tab-content">
 						<!--第一个选项卡-->
@@ -122,7 +124,7 @@
 								<div class="layui-form-item">
 									<label class="layui-form-label">派送员编号</label>
 									<div class="layui-input-inline">
-										<input type="text" name="psy_code" required lay-verify="required" placeholder="请输入派送员编号" autocomplete="off" class="layui-input">
+										<input id="psy_code" type="text" name="psy_code" required lay-verify="required" placeholder="请输入派送员编号" autocomplete="off" class="layui-input">
 									</div>							
 									<div class="layui-input-inline">
 										<button class="layui-btn" lay-submit lay-filter="psy_formDemo">提交</button>
@@ -182,9 +184,9 @@
 
 						</div>
 						<!--第三个选项卡-->
-						<div class="layui-tab-item">
+						<!--<div class="layui-tab-item">
 							<iframe src="/panda188/index.php/Home/Index/index" frameborder="1" width="600" height="700"></iframe>
-						</div>
+						</div>-->
 						<!--第四个选项卡-->
 						<div class="layui-tab-item">
 							<table id="demo" lay-filter="test"></table>
