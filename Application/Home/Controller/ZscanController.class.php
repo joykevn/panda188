@@ -4,6 +4,8 @@ namespace Home\Controller;
 use Think\Controller;
 
 class ZscanController extends Controller {
+    //类全局变量定义
+ 
 
     //首页
     public function index(){
@@ -79,9 +81,18 @@ class ZscanController extends Controller {
         $m3  = M('users','tab_','DB_dlSAE');//派送员人名
         //$m1  = M('zzps','tab_','DB_LOCALHOST');
         //$m2  = M('zzps_status','tab_','DB_LOCALHOST');//派送状态库
-        $timestart= strftime("%Y-%m-%d 00:00:00");
-        $timeend= strftime("%Y-%m-%d 23:59:59");
-        $psy_code=$_GET['psycode'];
+        if($_GET['flag']=='flag11'){//扫描操作
+            $timestart= strftime("%Y-%m-%d 00:00:00");
+            $timeend= strftime("%Y-%m-%d 23:59:59");
+        }else if($_GET['flag']=='flag00'){//查询操作
+            $timestart= strftime($_GET['date'].' 00:00:00');
+            $timeend= strftime($_GET['date'].' 23:59:59');
+        }else{
+            $this->ajaxReturn(0,'JSON');
+            die();
+        }
+        
+        $psy_code=$_GET['psy_code'];
         $data=$m2->where("paisongtime >='$timestart' and paisongtime <='$timeend' and psycode='$psy_code' ")->field()->select();
         //var_dump($data);die();
         if(sizeof($data)){//该单已扫描，待派送          
@@ -98,6 +109,8 @@ class ZscanController extends Controller {
             $this->ajaxReturn(0,'JSON');
         }
     }
+
+
     //测试验证数据调用
     public function printdd(){
         $m  = M('zzps','tab_','DB_dlSAE');
