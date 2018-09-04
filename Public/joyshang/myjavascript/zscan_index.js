@@ -18,6 +18,9 @@ layui.use(['jquery','element','table','laytpl','form','laydate'], function(){
 	    elem: '#date1'
 	  });
 	  
+	  var now = new Date(); 
+    date.value=new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getDate(); 
+	  
     //表格实例
     table.render({
        elem: '#demo'
@@ -39,7 +42,7 @@ layui.use(['jquery','element','table','laytpl','form','laydate'], function(){
     form.on('submit(btn_dingdanhao)', function(up_data){
         //alert($("#dingdanhao").name);
         //layer.msg($("#dingdanhao1").value);
-
+				$
         $.ajax({
             type: 'POST',
             url: "dd_check",
@@ -92,8 +95,7 @@ layui.use(['jquery','element','table','laytpl','form','laydate'], function(){
 
 
     //监听POST提交-查询订单
-    form.on('submit(btn_inqui re)', function(up_data){
-    	
+    form.on('submit(btn_inquire)', function(up_data){
         $.ajax({
             type: 'POST',
             url: "dd_check",
