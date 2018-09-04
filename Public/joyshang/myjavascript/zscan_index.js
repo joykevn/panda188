@@ -41,37 +41,38 @@ layui.use(['jquery','element','table','laytpl','form','laydate'], function(){
     form.on('submit(btn_dingdanhao)', function(up_data){
         //alert($("#dingdanhao").name);
         //layer.msg($("#dingdanhao1").value);
-				
+        //$('#dingdanhao1').reset();
+        //form.render(null, 'dingdanhao1'); //更新 lay-filter="test1" 所在容器内的全部表单状态
+        //layer.msg($("#dingdanhao1").value);
+        //$("#dingdanhao1").val("");
+        //$("#dingdanhao1").focus();
+        //return false;
         $.ajax({
             type: 'POST',
             url: "dd_check",
             data: up_data.field,
             dataType: 'json',
             success: function (get_data) {
-                console.log(get_data);
-                
-                //return false;
+                $("#dingdanhao1").val("");
+                $("#dingdanhao1").focus();
                 if(get_data=="psy_code_less")//无此派送员编码
                 {
                     layer.msg(JSON.stringify('请输入正确的派送员编码!'));
-                    //console.log('sucdeee');
                     return false;
                 }
                 if(get_data=="dingdan_less")//无此订单号
                 {
-                    layer.msg(JSON.stringify('请核实订单编号是否正确！'));
-                    //console.log('sucdeee');
+                    layer.msg(JSON.stringify('订单号：'+up_data.field.dingdanhao+' 请核实订单编号是否正确！'));
                     return false;
                 }
                 if(get_data=="dingdan_chongfu")//订单号重复
                 {
-                    layer.msg(JSON.stringify('该订单已经扫描过！'));
-                    //console.log('sucdeee');
+                    layer.msg(JSON.stringify('订单号：'+up_data.field.dingdanhao+' 该订单已经扫描过！'));
                     return false;
                 }
                 
                 //layer.msg(JSON.stringify(data[0].chepaihao));
-                //$("#dingdanhao").value="";
+                
                 table.render({
                     elem: '#table_ps'
                     ,height: 615
