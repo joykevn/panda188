@@ -16,8 +16,7 @@ layui.use(['jquery','element','table','laytpl','form','laydate'], function(){
 	  laydate.render({
 	    elem: '#date1'
 	  });
-	  
-	  
+	  //当前日期	  
 	  var now = new Date(); 
     date.value=new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getDate(); 
     //表格实例
@@ -98,6 +97,8 @@ layui.use(['jquery','element','table','laytpl','form','laydate'], function(){
                     ]]
                 }); 
                 
+                //$("table tr:nth-child(2)").css('background-color','red');
+                //设置登录
                 var psyCode = $("#psy_code").val();
 								$(".ps_name").text(psyCode);
             }
