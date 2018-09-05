@@ -146,6 +146,37 @@ layui.use(['jquery','element','table','laytpl','form','laydate'], function(){
             ,field = obj.field; //得到字段
         layer.msg('[ID: '+ data.id +'] ' + field + ' 字段更改为：'+ value);
     });
+    
+    
+     //触发事件
+  var active = {
+//  setPercent: function(){
+//    //设置50%进度
+//    element.progress('demo', '50%')
+//  },
+    loading: function(othis){
+      var DISABLED = 'layui-btn-disabled';
+      if(othis.hasClass(DISABLED)) return;
+    
+      //模拟loading
+      var n = 0, timer = setInterval(function(){
+        n = n + Math.random()*10|0;  
+        if(n>100){
+          n = 100;
+          clearInterval(timer);
+          othis.removeClass(DISABLED);
+        }
+        element.progress('demo', n+'%');
+      }, 300+Math.random()*1000);
+      
+      othis.addClass(DISABLED);
+    }
+  };
+  
+  $('.site-demo-active').on('click', function(){
+    var othis = $(this), type = $(this).data('type');
+    active[type] ? active[type].call(this, othis) : '';
+  });
 });
 
 

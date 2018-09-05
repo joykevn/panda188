@@ -1,5 +1,5 @@
 .page-sign {
-	background: #5dd5c8;
+	background: #f6f6f8;
 }
 #wrap {
 	position: relative
@@ -9,20 +9,11 @@
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	margin: 150px 0 0 -205px
+	margin: 10px 0 0 -205px
 }
 .sign-form .row-select {
     position: relative;
     z-index: 1;
-}
-.ipt {
-    padding: 6px 12px 5px 7px;
-    min-height: 22px;
-    line-height: 22px;
-    border: 1px solid #e3e7ed;
-    font-size: 13px;
-    vertical-align: middle;
-    min-width: 300px;
 }
 .btn {
     display: inline-block;
@@ -34,33 +25,17 @@
     font-size: 16px;
     color: #fff;
     letter-spacing: 1px;
-    background: #67e9db;
+    background: #00d7c6;
     text-align: center;
     cursor: pointer;
 }
 .sign-form {
 	width: 324px;
-	padding: 35px 43px 160px;
+	padding: 35px 43px 60px;
 	/*background: #fff;*/
 	border-radius: 8px;
 	/*box-shadow: 1px 2px 15px rgba(0, 0, 0, .3);*/
 	display: block;
-}
-.sign-scan {
-	position: relative
-}
-
-.sign-form .title {
-	font-weight: 400;
-	font-size: 26px;
-	line-height: 32px;
-	color: #fff;
-	position: relative;
-	text-align: center
-}
-
-.layui-tab-title li{
-	width: 40%;
 }
 .layui-tab-brief>.layui-tab-title .layui-this {
     color: #009688;
@@ -69,122 +44,6 @@
 .layui-input-block {
     /* margin-left: 110px; */
     min-height: 36px;
-}
-
-.sign-form form {
-	/*padding-top: 22px*/
-}
-
-.sign-form .form-row {
-	margin-top: 26px
-}
-
-.sign-form .row-select {
-	position: relative;
-	z-index: 1
-}
-
-.sign-form .form-row em.error {
-	position: absolute;
-	display: block;
-	right: 0;
-	top: 9px;
-	font-style: normal;
-	color: #9fa3b0;
-	font-size: 12px;
-	padding-right: 15px
-}
-
-.sign-form .form-row .link-signin,
-.sign-form .form-row .link-sms {
-	text-align: right;
-	position: absolute;
-	right: 0;
-	cursor: pointer;
-	bottom: -28px
-}
-
-.sign-form .ipt,
-.sign-form .sel {
-	width: 286px;
-	min-width: 0;
-	padding: 9px 18px;
-	border-color: #e3e7ed;
-	vertical-align: middle
-}
-
-.sign-form .sel {
-	margin-right: 0;
-	width: 380px;
-	height: 42px
-}
-
-.row-code .cell-wrap,
-.sign-form .ipt-wrap {
-	position: relative;
-	display: block
-}
-
-.row-code .cell-wrap {
-	display: inline-block
-}
-
-.sign-form .dropdown-select {
-	position: absolute;
-	top: 1px;
-	left: 28px;
-	height: 40px;
-	z-index: 1;
-	background: 0 0
-}
-
-.sign-form .dropdown-select .text-select {
-	display: inline-block;
-	font-style: normal;
-	cursor: pointer;
-	width: 37px;
-	padding: 7px 25px 7px 0;
-	border: 0;
-	text-align: right
-}
-
-.sign-form .dropdown-select .icon-select-arrow {
-	right: 5px;
-	top: 12px
-}
-
-.sign-form .dropdown-menu {
-	z-index: 10;
-	left: 0
-}
-
-.sign-form .dropdown-menu ul {
-	width: 176px;
-	max-height: 292px
-}
-
-.sign-form .dropdown-menu .num {
-	float: right
-}
-
-
-.sign-form .ipt-number {
-	padding-left: 38px;
-	width: 246px
-}
-
-.sign-form .ipt-name {
-	padding-left: 38px;
-	width: 246px
-}
-.sign-form .ipt-pwd {
-	padding-left: 38px;
-	width: 246px
-}
-
-.sign-form .ipt-code {
-	padding-left: 38px;
-	width: 162px
 }
 
 
@@ -197,11 +56,6 @@
 	border-color: #59cac2
 }
 
-
-.sign-form .form-btn {
-	margin-top: 45px
-}
-
 .sign-form .form-btn .btn {
 	width: 100%;
 	font-size: 16px;
@@ -211,17 +65,7 @@
 	cursor: pointer
 }
 
-.sign-form .form-btn .btn-disabled,
-.sign-form .form-btn .btn-scan {
-	background: #f2f5f9;
-	border-color: #f2f5f9;
-	color: #9fa3b0;
-	cursor: default
-}
 
-.sign-form .form-btn .btn-disabled {
-	cursor: default
-}
 
 .sign-form .form-btn .error-tip {
 	display: block;
@@ -245,4 +89,51 @@
 	padding: 39px 0 10px;;
 	text-align: center;
 	color: #9fa3af
+}
+
+@media screen and (max-width:450px) {
+
+
+
+	.layui-form-item .layui-input-inline {
+		display: inline-block;
+		float: none;
+		left: -3px;
+		width: auto;
+		margin: 0 0 10px 15px
+	}
+	.layui-form-item .layui-input-inline+.layui-form-mid {
+		margin-left: 110px;
+		top: -5px;
+		padding: 0
+	}
+}
+.ipt {
+    padding: 1px 12px 1px 7px;
+    min-height: 34px;
+    line-height: 34px;
+    border: 1px solid #e3e7ed;
+    font-size: 13px;
+    vertical-align: middle;
+    min-width: 160px;
+}
+.header{
+	width: 100%;
+	line-height: 50px;
+	height: 50px;
+	font-size: 18px;
+	text-align: center;
+	background-color: #00d7c6;
+	color: #FFF;
+	margin-bottom: 75px;
+}
+.layui-footer{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 80px;
+	line-height: 80px;
+	background-color: #00d7c6;
+	text-align: center;
+	color: #fff;
 }
