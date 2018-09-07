@@ -17,7 +17,7 @@ layui.use(['jquery','element','table','laytpl','form','laydate'], function(){
   
   //派送员查询页面
   var active = {
-    ,tabChange: function(){
+    tabChange: function(){
       //切换到指定Tab项
       element.tabChange('demo', '22'); //切换到：用户管理
     }
