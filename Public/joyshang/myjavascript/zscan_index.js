@@ -88,7 +88,7 @@ layui.use(['jquery','element','table','laytpl','form','laydate'], function(){
                       }
                     ,cols:[[
                         {field:'id',title:'ID',width:70,sort:true,align:'center'}
-                        ,{field:'dingdanhao',title:'订单号',width:200,align:'center'}
+                        ,{field:'dingdanhao',title:'订单号',event: 'detail',width:200,align:'center'}
                         ,{field:'chepaihao',title:'车牌号',width:100,align:'center'}
                         ,{field:'shoujianren',title:'收件人',width:100,align:'center'}
                         ,{field:'sddizhi',title:'地址',width:550,align:'left'}
@@ -106,8 +106,10 @@ layui.use(['jquery','element','table','laytpl','form','laydate'], function(){
         });
         return false;
     });
-
-		
+//
+//table.on('tool(test)', function(obj){ //test为你table的lay-filter对应的值
+//if(obj.event === 'classStatus'){
+//}
 
     //监听POST提交-查询订单
     form.on('submit(btn_inquire)', function(up_data){
