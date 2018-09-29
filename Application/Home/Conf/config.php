@@ -41,6 +41,10 @@ return array(
         'db_name'  => 'web_maildb',
         'db_charset'=>'utf8',
     ),
+    //U()函数的伪静态后缀名，默认为: .html
+    //'URL_HTML_SUFFIX'=>"",
+    //404页面配置地址
+    'TMPL_EXCEPTION_FILE' => 'Public/_404.html',
     //邮件服务器
 //     'MAIL_HOST' =>'smtp.163.com',//smtp服务器的名称
 //     'MAIL_PORT'=>25,
