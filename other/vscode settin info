@@ -1,0 +1,15 @@
+//vs code setting 适用于PHP 的配置
+{
+    //基本用户配置
+    "editor.fontSize": 18,
+    //PHP配置
+    "extensions.ignoreRecommendations": true,
+    "workbench.iconTheme": "vs-seti", //增加文件夹图标    
+    "php.validate.executablePath": "C:\\wamp64\\bin\\php\\php7.0.10\\php.exe",  //这两个对于PHP非常重要    
+    "php.executablePath": "C:\\wamp64\\bin\\php\\php7.0.10\\php.exe",    
+    "extensions.autoUpdate": false,    
+    "window.zoomLevel": 0,    
+    "editor.minimap.enabled": false,     //这个会关掉右边滑动预览栏（非常占位子）     
+    "editor.wordWrap": "on",
+    "workbench.colorTheme": "Default High Contrast" //每行如果超出视图范围就自动换行显示（仅仅是显示换行，方便阅读和编辑）
+}

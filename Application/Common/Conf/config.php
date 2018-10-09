@@ -4,7 +4,7 @@ return array(
     'DEFAULT_MODULE'=>'MPhone',//配置MPHONE为默认模块
 
     //本地数据库配置1
-    'DB_LOCALHOST' => array(
+    'DB_LOCALHOST_SZ88' => array(
         'db_type'  => 'mysql',
         'db_user'  => 'root',
         'db_pwd'   => '553322',
@@ -14,7 +14,7 @@ return array(
         'db_charset'=>'utf8',
     ),
     //本地数据库配置2
-    'DB_LOCALHOST' => array(
+    'DB_LOCALHOST_WORKDB' => array(
         'db_type'  => 'mysql',
         'db_user'  => 'root',
         'db_pwd'   => '553322',
