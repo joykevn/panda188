@@ -13,7 +13,7 @@ layui.use(['jquery','element','table','laytpl','form'], function(){
     table.render({
        elem: '#demo'
         ,height: 615
-        ,url:'/panda188/index.php/Home/Zzps/printdd/'
+        ,url:'printdd'
         ,page:true
         ,even: true //开启隔行背景
         ,size: 'sm' //小尺寸的表格
@@ -37,18 +37,14 @@ layui.use(['jquery','element','table','laytpl','form'], function(){
             data: up_data.field,
             dataType: 'json',
             success: function (get_data) {
-                console.log(get_data);
-                //return false;
                 if(get_data=="psy_code_less")//无此派送员编码
                 {
                     layer.msg(JSON.stringify('请输入正确的派送员编码!'));
-                    //console.log('sucdeee');
                     return false;
                 }
                 if(get_data=="dingdan_less")//无此订单号
                 {
                     layer.msg(JSON.stringify('请核实订单编号是否正确！'));
-                    //console.log('sucdeee');
                     return false;
                 }
                 //layer.msg(JSON.stringify(data[0].chepaihao));

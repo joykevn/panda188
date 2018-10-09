@@ -68,14 +68,11 @@ class ZscanController extends Controller {
     }
     //读取派送状态表tab_zzpsstatus，渲染派送表格
     public function rend_table_ps(){
-        $m1  = M('zzps','tab_','DB_dlSAE');//基础数据库
+        //$m1  = M('users','tab_','DB_dlSAE');//派送员人名
         $m2  = M('zzps_status','tab_','DB_dlSAE');//派送状态库
-        //$m1  = M('zzps','tab_','DB_LOCALHOST');
-        //$m2  = M('zzps_status','tab_','DB_LOCALHOST');//派送状态库
+
         $data=$m2->field()->select();
         if(sizeof($data)){//该单已扫描，待派送          
-            
-            
             $dbArr['code']=0;
             $dbArr['msg']="";
             $dbArr['count']=sizeof($data);
