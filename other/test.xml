@@ -1,0 +1,63 @@
+<DataRecordSet>
+  <DataRecord table="ts_orderhist">
+    <orderhistcode _t="str" _v="41012518092955704636" />
+    <contactname _t="str" _v="李松">hello</contactname>
+    <state _t="str" _v="6" />
+    <isfeeneed _t="str" _v="2" />
+    <viliddt _t="str" _v="2018-09-29 11:30:54" />
+    <mddt _t="str" _v="2018-10-02 16:03:35" />
+    <offeredtime _t="str" _v="2018-09-30" />
+    <n_offeredtime _t="str" _v="" />
+    <crusr _t="str" _v="07002529" />
+    <outdt _t="str" _v="" />
+    <ordersrc _t="str" _v="" />
+    <subdeptcode _t="str" _v="" />
+    <saledept _t="str" _v="T" />
+    <saletypein _t="str" _v="P" />
+    <applno _t="str" _v="TDAA20184101DAM0256021;TDZA20184101DAM0299184" _o="TDAA20184101DAM0256021" _chg="Y" />
+    <insurno _t="str" _v="PDAA20184101DAM0220980;PDZA20184101DAM0259689" _o="PDAA20184101DAM0220980" _chg="Y" />
+    <insurinfocode _t="str" _v="IA000000000099055517" />
+    <startdate _t="str" _v="2018-11-01" _o="2018-11-01" />
+    <licenseno _t="str" _v="豫A56SJ7" _o="豫A56SJ7"/>
+    <carcheckflag _t="str" _v="N" />
+    <grade _t="str" _v="" />
+    <gradename _t="str" _v="" />
+    <barcode _t="str" _v="" />
+    <barcode_second _t="str" _v="410125180929557046362" />
+    <accflag _t="str" _v="X" />
+    <operkind _t="str" _v="0" />
+    <comcode _t="str" _v="41012505" />
+    <usescorestatus _t="str" _v="" _o="" />
+  </DataRecord>
+  <DataRecord table="ts_orderhist">
+    <orderhistcode _t="str" _v="41012518092955739536" />
+    <contactname _t="str" _v="徐云杰"
+    />
+    <state _t="str" _v="6" />
+    <isfeeneed _t="str" _v="2" />
+    <viliddt _t="str" _v="2018-09-29 17:12:21" />
+    <mddt _t="str" _v="2018-10-02 15:51:42" />
+    <offeredtime _t="str" _v="2018-09-30" />
+    <n_offeredtime _t="str" _v="" />
+    <crusr _t="str" _v="07002685" />
+    <outdt _t="str" _v="" />
+    <ordersrc _t="str" _v="" />
+    <subdeptcode _t="str" _v="" />
+    <saledept _t="str" _v="T" />
+    <saletypein _t="str" _v="P" />
+    <applno _t="str" _v="TDAA20184101DAM0257486;TDZA20184101DAM0300416" _o="TDAA20184101DAM0257486" _chg="Y" />
+    <insurno _t="str" _v="PDAA20184101DAM0225685;PDZA20184101DAM0263570" _o="PDAA20184101DAM0225685" _chg="Y" />
+    <insurinfocode _t="str" _v="IA000000000099119315" />
+    <startdate _t="str" _v="2018-10-06;2018-10-05" _o="2018-10-06" _chg="Y" />
+    <licenseno _t="str" _v="豫ARJ664" _o="豫ARJ664"/>
+    <carcheckflag _t="str" _v="N" />
+    <grade _t="str" _v="" />
+    <gradename _t="str" _v="" />
+    <barcode _t="str" _v="" />
+    <barcode_second _t="str" _v="" />
+    <accflag _t="str" _v="X" />
+    <operkind _t="str" _v="0" />
+    <comcode _t="str" _v="41012505" />
+    <usescorestatus _t="str" _v="" _o="" />
+  </DataRecord>
+</DataRecordSet>
