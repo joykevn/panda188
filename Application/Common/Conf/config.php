@@ -23,6 +23,16 @@ return array(
         'db_name'  => 'workdb',
         'db_charset'=>'utf8',
     ),
+    //本地数据库配置3
+    'DB_LOCALHOST_zzpicc' => array(
+        'db_type'  => 'mysql',
+        'db_user'  => 'root',
+        'db_pwd'   => '',
+        'db_host'  => '127.0.0.1',
+        'db_port'  => '3306',
+        'db_name'  => 'zzpicc',
+        'db_charset'=>'utf8',
+    ),
     //数据库配置2-新浪云共享数据库
     'DB_SAE' => array(
         'db_type'  => 'mysql',

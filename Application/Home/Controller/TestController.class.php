@@ -28,13 +28,32 @@ class TestController extends Controller {
         );
         
 
-        $study = array();
+        $dingdan_temp_arr = array();
         $xml = simplexml_load_file('./other/test3.xml');
-        foreach($xml->children() as $period) {
-            $study[] = get_object_vars($period);//获取对象全部属性，返回数组
+        // foreach($xml->children() as $period) {
+        //     $study[] = get_object_vars($period);//获取对象全部属性，返回数组
+        // }
+        // echo '<pre>';
+        // p($study[0][contactname]->attributes());
+        // echo "-----------------------------------";
+        // p($study[0]);
+        $count=1;
+        $Info_bd  = M('baodan','info_','USED_DB');
+        foreach($xml->children() as $DataRecord){
+            $i=1;
+            //echo "<h2>" . $count++ . '_____________________________________________</h2>';
+            //$dingdan_temp_arr['id']=$count++;
+            foreach ($DataRecord as $obj) {
+                echo $i++ . "：";
+                //echo $obj->getName() . ">>>>";
+                $key=(string)$obj->getName();
+                echo $obj->attributes()->_v;
+                $dingdan_temp_arr[$key]=(string)$obj->attributes()->_v;
+                echo "<br>";
+            }
+            p($dingdan_temp_arr);
+            $Info_bd->data($dingdan_temp_arr)->add();
+            
         }
-        echo '<pre>';
-        p($study[0][contactname]);
     }
-    
 }
