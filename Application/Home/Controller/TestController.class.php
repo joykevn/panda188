@@ -29,7 +29,7 @@ class TestController extends Controller {
         
 
         $dingdan_temp_arr = array();
-        $xml = simplexml_load_file('./other/test3.xml');
+        $xml = simplexml_load_file('./other/ddgl_psdy2.xml');
         // foreach($xml->children() as $period) {
         //     $study[] = get_object_vars($period);//获取对象全部属性，返回数组
         // }
@@ -52,7 +52,7 @@ class TestController extends Controller {
                 echo "<br>";
             }
             p($dingdan_temp_arr);
-            $Info_bd->data($dingdan_temp_arr)->add();
+            //$Info_bd->data($dingdan_temp_arr)->add();
             
         }
     }
