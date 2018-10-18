@@ -29,7 +29,7 @@ class TestController extends Controller {
         
 
         $dingdan_temp_arr = array();
-        $xml = simplexml_load_file('./other/ddgl_psdy2.xml');
+        $xml = simplexml_load_file('./other/bdgl_bdcx.xml');
         // foreach($xml->children() as $period) {
         //     $study[] = get_object_vars($period);//获取对象全部属性，返回数组
         // }
@@ -41,19 +41,23 @@ class TestController extends Controller {
         $Info_bd  = M('baodan','info_','USED_DB');
         foreach($xml->children() as $DataRecord){
             $i=1;
-            //echo "<h2>" . $count++ . '_____________________________________________</h2>';
+            echo "<h2>" . $count++ . '_____________________________________________</h2>';
             //$dingdan_temp_arr['id']=$count++;
             foreach ($DataRecord as $obj) {
-                echo $i++ . "：";
+                //echo $i++ . "：";
                 //echo $obj->getName() . ">>>>";
                 $key=(string)$obj->getName();
-                echo $obj->attributes()->_v;
-                $dingdan_temp_arr[$key]=(string)$obj->attributes()->_v;
+                echo '`';
+                echo $key;
+                echo '`';
+                echo ' varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,';
+                //echo $obj->attributes()->_v;
+                //$dingdan_temp_arr[$key]=(string)$obj->attributes()->_v;
                 echo "<br>";
             }
-            p($dingdan_temp_arr);
+            //p($dingdan_temp_arr);
             //$Info_bd->data($dingdan_temp_arr)->add();
-            
+            break;
         }
     }
 }
