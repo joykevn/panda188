@@ -1,0 +1,114 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+    <title>保单派送</title>
+    <!--[if (gte IE 9)|!(IE)]><!-->
+    <script src="__ROOT__/Public/amaze/assets/js/jquery.min.js"></script>
+    <!--<![endif]-->
+    <!--[if lte IE 8 ]>
+    <script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+    <script src="__ROOT__/Public/amaze/assets/js/amazeui.ie8polyfill.min.js"></script>
+    <![endif]-->
+    <script src="__ROOT__/Public/amaze/assets/js/amazeui.min.js"></script>
+    <script src="__ROOT__/Public/joyshang/myjavascript/zzps_psd.js"></script>
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+    <link rel="icon" type="image/png" href="__ROOT__/Public/amaze/assets/i/favicon.png">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="__ROOT__/Public/amaze/assets/i/app-icon72x72@2x.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+    <link rel="apple-touch-icon-precomposed" href="__ROOT__/Public/amaze/assets/i/app-icon72x72@2x.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
+    <meta name="msapplication-TileColor" content="#0e90d2">
+
+    <link rel="stylesheet" href="__ROOT__/Public/amaze/assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="__ROOT__/Public/amaze/assets/css/app.css">
+    <link rel="stylesheet" href="__ROOT__/Public/joyshang/mycss/zzps_psd.css">
+    <style>
+        .table1_1 table {
+            width:100%;
+            margin:15px 0
+        }
+        .table1_1 th {
+            background-color:#93DAFF;
+            color:#000000
+        }
+        .table1_1,.table1_1 th,.table1_1 td
+        {
+            font-size:0.95em;
+            text-align:center;
+            padding:4px;
+            border:1px solid #dddddd;
+            border-collapse:collapse
+        }
+        .table1_1 tr:nth-child(odd){
+            background-color:#dbf2fe;
+        }
+        .table1_1 tr:nth-child(even){
+            background-color:#fdfdfd;
+        }
+    </style>
+</head>
+<body>
+    <table class=table1_1>
+    <tr>
+        <!-- 保单号，保险人，车牌号，手机号，身份证号,车架号，保单生效日期，订单日期 -->
+        <th>保单号</th><th>保险人</th><th>车牌号</th>
+        <th>手机号</th><th>身份证号</th><th>车架号</th>
+        <th>保单生效日期</th><th>订单日期</th><th>派送员</th>
+        <th>派送状态</th><th>备注</th><th>派送时间</th>
+    </tr>
+    <tr>
+    <foreach name="list" item="vo" >           
+        <td>{$vo}</td>
+    </foreach>
+    </tr>
+    
+    </table>
+
+<!--在这里编写你的代码-->
+<footer data-am-widget="footer"
+        class="am-footer am-footer-default"
+        data-am-footer="{  }">
+    <div class="am-footer-switch">
+    <span class="am-footer-ysp" data-rel="mobile"
+          data-am-modal="{target: '#am-switch-mode'}">
+          万物联云
+    </span>
+        <span class="am-footer-divider"> | </span>
+        <a id="godesktop" data-rel="desktop" class="am-footer-desktop" href="javascript:">
+            电脑版
+        </a>
+    </div>
+    <div class="am-footer-miscs ">
+
+        <p>由 <a href="http://wwly.applinzi.com/index.php/Home/Index/index" title="万物联云"
+                target="_blank" class="">万物联云</a>
+            提供技术支持</p>
+        <p>CopyRight©2014  WWLY Inc.</p>
+        <p>京ICP备13033178</p>
+    </div>
+</footer>
+
+</body>
+</html>
+    

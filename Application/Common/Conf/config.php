@@ -34,13 +34,13 @@ return array(
         'db_charset'=>'utf8',
     ),
     //数据库配置2-新浪云共享数据库
-    'DB_SAE' => array(
+    'DB_gxSAE' => array(
         'db_type'  => 'mysql',
-        'db_user'  => 'x40lnjx32y',
-        'db_pwd'   => 'xzk043yjy14xz3xh1zizkikm31mzm110hj0zh55l',
+        'db_user'  => '2xm230l1x0',
+        'db_pwd'   => 'mih4xmmml132zmh54y4lh05xhzjlz4mij2m5mzl5',
         'db_host'  => 'w.rdc.sae.sina.com.cn',
         'db_port'  => '3306',
-        'db_name'  => 'app_sz88',
+        'db_name'  => 'app_wwly',
         'db_charset'=>'utf8',
     ),    
     //数据库配置3-新浪云独立数据库
@@ -53,4 +53,6 @@ return array(
         'db_name'  => 'web_maildb',
         'db_charset'=>'utf8',
     ),
+    //数据表id索引计数
+    'DB_ID_COUNT'=> 0,
 );

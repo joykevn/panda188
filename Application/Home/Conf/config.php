@@ -4,8 +4,8 @@ return array(
 //全局配置当前使用的数据库，便于网络移植
 //'USED_DB'=>C('DB_LOCALHOST_WORKDB'),//本地数据库workdb
 //'USED_DB'=>C('DB_LOCALHOST_SZ88'),//本地数据库
-'USED_DB'=>C('DB_LOCALHOST_zzpicc'),
-//'USED_DB'=>C('DB_SAE'),//新浪云共享数据库
+'USED_DB'=>C('DB_LOCALHOST_zzpicc'),//本地数据库zzpicc
+//'USED_DB'=>C('DB_gxSAE'),//新浪云共享数据库
 //'USED_DB'=>C('DB_dlSAE'),//新浪云独立数据库
     //邮件服务器
 //     'MAIL_HOST' =>'smtp.163.com',//smtp服务器的名称
