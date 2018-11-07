@@ -10,6 +10,11 @@ class ZzpsController extends Controller {
         $this->display();
     }
 
+    //调试页面
+    public function test(){
+        $this->display();
+    }
+
     /***
      * 到zzpicc数据库info_baodan106数据表中查询该保单是否存在
      * 若存在，将该数据复制后，反馈给熊猫主页

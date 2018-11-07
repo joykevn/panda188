@@ -18,33 +18,35 @@ class TestController extends Controller {
         );
         p($data);
         p($_POST);
-        $this->error('插入失败，请重试……');
+       // $this->error('插入失败，请重试……');
     }
     public function readxml(){
         $dingdan_temp_arr = array();
-        $xml = simplexml_load_file('./other/xxbd_xml/d1101.xml');
+        $xml = simplexml_load_file('./other/psfenpei/psfp1020.xml');
         
         $Info_bd  = M('baodan106','info_','USED_DB');
-        $count=$Info_bd->count();
+        //$count=$Info_bd->count();
+        $count=0;
         foreach($xml->children() as $DataRecord){
-            $i=1;
+            $i=0;
             //$dingdan_temp_arr['id']=$count++;
             foreach ($DataRecord as $obj) {
-                //echo $i++ . "：";
+                echo "<b>(". ++$i . ")：</b>";
                 //echo $obj->getName() . ">>>>";
                 $key=(string)$obj->getName();
-                //echo $key;
-                //echo '=>';
-                //echo $obj->attributes()->_v;
+                echo $key;
+                echo '=>';
+                echo $obj->attributes()->_v;
                 $dingdan_temp_arr[$key]=(string)$obj->attributes()->_v;
-                //echo "<br>";
+                
             }
-            p($dingdan_temp_arr);
-            $dingdan_temp_arr['savedt']=date("Y-m-d H:i:s");
-            $dingdan_temp_arr['otherinfo']='1102集中写入';
+            //p($dingdan_temp_arr);
+            //$dingdan_temp_arr['savedt']=date("Y-m-d H:i:s");
+            //$dingdan_temp_arr['otherinfo']='1102集中写入';
             //$dbcount=$Info_bd->data($dingdan_temp_arr)->add();
-            echo ++$count . '->'.$dbcount.'<br>';
-            break;
+            //echo ++$count . '->'.$dbcount.'<br>';
+            echo "<h3>" . ++$count . ":---------" . "</h3>";
+            //break;
         }
     }
     public function demo_get_data(){

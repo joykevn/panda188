@@ -1,114 +1,227 @@
-<!doctype html>
-<html class="no-js">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1">
-    <title>保单派送</title>
-    <!--[if (gte IE 9)|!(IE)]><!-->
-    <script src="__ROOT__/Public/amaze/assets/js/jquery.min.js"></script>
-    <!--<![endif]-->
-    <!--[if lte IE 8 ]>
-    <script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
-    <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
-    <script src="__ROOT__/Public/amaze/assets/js/amazeui.ie8polyfill.min.js"></script>
-    <![endif]-->
-    <script src="__ROOT__/Public/amaze/assets/js/amazeui.min.js"></script>
-    <script src="__ROOT__/Public/joyshang/myjavascript/zzps_psd.js"></script>
-    <!-- Set render engine for 360 browser -->
-    <meta name="renderer" content="webkit">
+﻿<!DOCTYPE html>
+<html class=" ">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>中介管理平台</title>
+		<link href="__ROOT__/Public/joyshang/mycss/biaoge.css" rel="stylesheet">
+		<style id="tsbrowser_video_independent_player_style" type="text/css">
+			[tsbrowser_force_max_size] {
+				width: 100% !important;
+				height: 100% !important;
+				left: 0px !important;
+				top: 0px !important;
+				margin: 0px !important;
+				padding: 0px !important;
+			}
+			
+			[tsbrowser_force_fixed] {
+				position: fixed !important;
+				z-index: 9999 !important;
+				background: black !important;
+			}
+			
+			[tsbrowser_force_hidden] {
+				opacity: 0 !important;
+				z-index: 0 !important;
+			}
+			
+			[tsbrowser_hide_scrollbar] {
+				overflow: hidden !important;
+			}
+		</style>
+		<style type="text/css">
+			@keyframes resizeanim {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 0;
+				}
+			}
+			
+			.resize-triggers {
+				animation: 1ms resizeanim;
+				visibility: hidden;
+				opacity: 0;
+			}
+			
+			.resize-triggers,
+			.resize-triggers>div,
+			.contract-trigger:before {
+				content: " ";
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				overflow: hidden;
+				z-index: -1
+			}
+			
+			.resize-triggers>div {
+				background: #eee;
+				overflow: auto;
+			}
+			
+			.contract-trigger:before {
+				width: 200%;
+				height: 200%;
+			}
+			tr:hover{
+				
+			}
+		</style>
+	</head>
 
-    <!-- No Baidu Siteapp-->
-    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+	<body>
+		<div id="app">
+			<div data-v-64137149="" class="container color_base8 el-row">
 
-    <link rel="icon" type="image/png" href="__ROOT__/Public/amaze/assets/i/favicon.png">
+				<div data-v-64137149="" class="el-col el-col-24 main">
 
-    <!-- Add to homescreen for Chrome on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" sizes="192x192" href="__ROOT__/Public/amaze/assets/i/app-icon72x72@2x.png">
+					<section data-v-64137149="" class="content-container bg_base10">
+						<div data-v-64137149="" class="grid-content bg-purple-light">
+							<div data-v-47fa4d0f="" data-v-64137149="" class="tags-view-wrapper">
 
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
-    <link rel="apple-touch-icon-precomposed" href="__ROOT__/Public/amaze/assets/i/app-icon72x72@2x.png">
+								<div data-v-64137149="" class="content-wrapper el-col el-col-24" id="fullScreenMain">
+									<section data-v-268fcbfa="" data-v-64137149="">
 
-    <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
-    <meta name="msapplication-TileColor" content="#0e90d2">
+										<div data-v-268fcbfa="" class="el-col el-col-24">
+											<div data-v-268fcbfa="" class="el-row" style="margin-left: -3px; margin-right: -3px;">
+												<div data-v-268fcbfa="" class="el-col el-col-24 el-col-lg-24 el-col-xl-24" style="padding-left: 3px; padding-right: 3px;">
+													<div data-v-268fcbfa="" class="el-table el-table--fit el-table--striped el-table--scrollable-x el-table--enable-row-transition el-table--small" style="width: 100%;">
+														<div class="hidden-columns">
+															<div data-v-268fcbfa=""></div>
+															<div data-v-268fcbfa=""></div>
+															<div data-v-268fcbfa=""></div>
+															<div data-v-268fcbfa=""></div>
+															<div data-v-268fcbfa=""></div>
+															<div data-v-268fcbfa=""></div>
+															<div data-v-268fcbfa=""></div>
+															<div data-v-268fcbfa=""></div>
+															<div data-v-268fcbfa=""></div>
+															<div data-v-268fcbfa=""></div>
+															<div data-v-268fcbfa=""></div>
 
-    <link rel="stylesheet" href="__ROOT__/Public/amaze/assets/css/amazeui.min.css">
-    <link rel="stylesheet" href="__ROOT__/Public/amaze/assets/css/app.css">
-    <link rel="stylesheet" href="__ROOT__/Public/joyshang/mycss/zzps_psd.css">
-    <style>
-        .table1_1 table {
-            width:100%;
-            margin:15px 0
-        }
-        .table1_1 th {
-            background-color:#93DAFF;
-            color:#000000
-        }
-        .table1_1,.table1_1 th,.table1_1 td
-        {
-            font-size:0.95em;
-            text-align:center;
-            padding:4px;
-            border:1px solid #dddddd;
-            border-collapse:collapse
-        }
-        .table1_1 tr:nth-child(odd){
-            background-color:#dbf2fe;
-        }
-        .table1_1 tr:nth-child(even){
-            background-color:#fdfdfd;
-        }
-    </style>
-</head>
-<body>
-    <table class=table1_1>
-    <tr>
-        <!-- 保单号，保险人，车牌号，手机号，身份证号,车架号，保单生效日期，订单日期 -->
-        <th>保单号</th><th>保险人</th><th>车牌号</th>
-        <th>手机号</th><th>身份证号</th><th>车架号</th>
-        <th>保单生效日期</th><th>订单日期</th><th>派送员</th>
-        <th>派送状态</th><th>备注</th><th>派送时间</th>
-    </tr>
-    <tr>
-    <foreach name="list" item="vo" >           
-        <td>{$vo}</td>
-    </foreach>
-    </tr>
-    
-    </table>
+														</div>
+														<div class="el-table__header-wrapper">
+															<table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 2014px;">
+																<colgroup>
+																	<col name="el-table_2_column_11" width="190">
+																	<col name="el-table_2_column_12" width="80">
+																	<col name="el-table_2_column_13" width="80">
+																	<col name="el-table_2_column_14" width="100">
+																	<col name="el-table_2_column_15" width="150">
+																	<col name="el-table_2_column_16" width="150">
+																	<col name="el-table_2_column_17" width="100">
+																	<col name="el-table_2_column_18" width="150">
+																	<col name="el-table_2_column_19" width="80">
+																	<col name="el-table_2_column_20" width="80">
+																	<col name="el-table_2_column_21" width="800">
+																	<col name="el-table_2_column_22" width="80">
 
-<!--在这里编写你的代码-->
-<footer data-am-widget="footer"
-        class="am-footer am-footer-default"
-        data-am-footer="{  }">
-    <div class="am-footer-switch">
-    <span class="am-footer-ysp" data-rel="mobile"
-          data-am-modal="{target: '#am-switch-mode'}">
-          万物联云
-    </span>
-        <span class="am-footer-divider"> | </span>
-        <a id="godesktop" data-rel="desktop" class="am-footer-desktop" href="javascript:">
-            电脑版
-        </a>
-    </div>
-    <div class="am-footer-miscs ">
+																</colgroup>
+																<thead class="has-gutter">
+																	<tr class="">
+																		<th colspan="1" rowspan="1" class="el-table_2_column_11">
+																			<div class="cell">保单号</div>
+																		</th>
+																		<th colspan="1" rowspan="1" class="el-table_2_column_12     is-leaf">
+																			<div class="cell">保险人</div>
+																		</th>
+																		<th colspan="1" rowspan="1" class="el-table_2_column_13     is-leaf">
+																			<div class="cell">车牌号</div>
+																		</th>
+																		<th colspan="1" rowspan="1" class="el-table_2_column_14     is-leaf">
+																			<div class="cell">手机号</div>
+																		</th>
+																		<th colspan="1" rowspan="1" class="el-table_2_column_15     is-leaf">
+																			<div class="cell">身份证号</div>
+																		</th>
+																		<th colspan="1" rowspan="1" class="el-table_2_column_16     is-leaf">
+																			<div class="cell">车架号</div>
+																		</th>
+																		<th colspan="1" rowspan="1" class="el-table_2_column_17     is-leaf">
+																			<div class="cell">保单生效日期</div>
+																		</th>
+																			<th colspan="1" rowspan="1" class="el-table_2_column_18     is-leaf">
+																			<div class="cell">订单日期</div>
+																		</th>
+																		<th colspan="1" rowspan="1" class="el-table_2_column_18     is-leaf">
+																			<div class="cell">派送员</div>
+																		</th>
+																		<th colspan="1" rowspan="1" class="el-table_2_column_19     is-leaf">
+																			<div class="cell">派送状态</div>
+																		</th>
+																		<th colspan="1" rowspan="1" class="el-table_2_column_20     is-leaf">
+																			<div class="cell">备注</div>
+																		</th>
+																		<th colspan="1" rowspan="1" class="el-table_2_column_21     is-leaf">
+																			<div class="cell">派送时间</div>
+																		</th>
+																	</tr>
+																</thead>
+															</table>
+														</div>
+														<div class="el-table__body-wrapper is-scrolling-left">
+															<table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 2014px;">
+																<colgroup>
+																	<col name="el-table_2_column_11" width="190">
+																	<col name="el-table_2_column_12" width="80">
+																	<col name="el-table_2_column_13" width="80">
+																	<col name="el-table_2_column_14" width="100">
+																	<col name="el-table_2_column_15" width="150">
+																	<col name="el-table_2_column_16" width="150">
+																	<col name="el-table_2_column_17" width="100">
+																	<col name="el-table_2_column_18" width="150">
+																	<col name="el-table_2_column_19" width="80">
+																	<col name="el-table_2_column_20" width="80">
+																	<col name="el-table_2_column_21" width="800">
+																	<col name="el-table_2_column_22" width="80">
 
-        <p>由 <a href="http://wwly.applinzi.com/index.php/Home/Index/index" title="万物联云"
-                target="_blank" class="">万物联云</a>
-            提供技术支持</p>
-        <p>CopyRight©2014  WWLY Inc.</p>
-        <p>京ICP备13033178</p>
-    </div>
-</footer>
+																</colgroup>
+																<tbody>
+																				
+																	<tr class="el-table__row">
+																		<foreach name="list" item="vo" >           
+																			<td class="el-table_2_column_17">
+																				<div class="cell">
+																						{$vo}
+																				</div>
+																			</td>
+																		</foreach>																		
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+													<div data-v-268fcbfa="" class="toolbar orderToolbar el-col el-col-24" style="padding-left: 3px; padding-right: 3px;">
+														<div data-v-268fcbfa="" class="alignRight el-pagination is-background">
+															<span class="el-pagination__total">共 8 条</span>
+															<button type="button" class="btn-prev disabled"><i class="el-icon el-icon-arrow-left"></i></button>
+															<ul class="el-pager">
+																<li class="number active">1</li>
+															</ul><button type="button" class="btn-next disabled">
+																<i class="el-icon el-icon-arrow-right"></i>
+															</button><span class="el-pagination__jump">前往<div class="el-input el-pagination__editor is-in-pagination">
+																<input type="number" autocomplete="off" min="1" max="1" class="el-input__inner"></div>页</span></div>
+													</div>
+												</div>
+												<!---->
+											</div>
+										</div>
+								</div>
 
-</body>
+							</div>
+							</section>
+						</div>
+				</div>
+				</section>
+			</div>
+		</div>
+		</div>
+
+	</body>
+
 </html>
-    
